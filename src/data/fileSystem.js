@@ -213,6 +213,13 @@ export const fileSystemData = {
                       id: "p-vs-np",
                       name: "P vs NP 问题 (经典计算基石)",
                       type: "file",
+                      resources: [
+                        {
+                          title: "P versus NP problem - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/P_versus_NP_problem",
+                          description: "非常全面",
+                        },
+                      ],
                     },
                     {
                       id: "bqp",
