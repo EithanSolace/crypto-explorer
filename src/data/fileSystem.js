@@ -219,6 +219,11 @@ export const fileSystemData = {
                           url: "https://en.wikipedia.org/wiki/P_versus_NP_problem",
                           description: "非常全面",
                         },
+                        {
+                          title: "Cook-Levin Theorem - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1NzUDBzEmr/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，7分钟不到",
+                        },
                       ],
                     },
                     {
