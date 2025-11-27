@@ -49,9 +49,7 @@ export const fileSystemData = {
 │       │   └── 密码学安全伪随机生成器 (CSPRNG)
 │       │       ├── 前向安全性 (Forward Secrecy)
 │       │       └── 回溯抗性 (Backtracking Resistance)
-│       └── 基础原语 (Primitives)
-│           ├── 伪随机函数 (PRF)
-│           └── 伪随机置换 (PRP)
+│       └── 伪随机函数 (PRF)
 │
 ├── 对称密码原语 (Symmetric Primitives)
 │   ├── 分组密码 (Block Ciphers)
@@ -88,28 +86,21 @@ export const fileSystemData = {
 │           └── CBC (密码分组链接)
 │
 ├── 非对称密码原语 (Asymmetric Primitives)
-│   ├── 基于大整数分解 (Integer Factorization)
-│   │   ├── 素性测试与密钥生成 (Primality Testing)
-│   │   ├── RSA 算法
-│   │   │   ├── PKCS#1 v1.5
-│   │   │   └── OAEP / PSS
+│   ├── 公钥加密 (Public Key Encryption)
+│   │   ├── RSA 加密 (OAEP)
+│   │   ├── ElGamal 加密
 │   │   ├── Paillier (加法同态)
-│   │   └── Rabin
-│   ├── 基于离散对数 (DLP - Finite Fields)
-│   │   ├── Diffie-Hellman (DH)
+│   │   └── SM2 加密
+│   ├── 数字签名 (Digital Signatures)
+│   │   ├── RSA 签名 (PKCS#1 v1.5, PSS)
 │   │   ├── DSA
-│   │   └── ElGamal
-│   └── 椭圆曲线密码 (ECC - DLP)
-│       ├── 曲线体系
-│       │   ├── NIST P-curves (P-256, P-384)
-│       │   ├── Bernstein Curves (Curve25519, Curve448)
-│       │   └── 国密 SM2
-│       ├── 核心协议
-│       │   ├── ECDH / X25519
-│       │   └── 签名协议 (ECDSA, EdDSA)
-│       └── 基于配对 (Pairing-based)
-│           ├── BLS (聚合签名)
-│           └── IBE (基于身份的加密)
+│   │   ├── ECDSA / EdDSA
+│   │   ├── SM2 签名
+│   │   ├── Schnorr 签名
+│   │   └── BLS (聚合签名)
+│   └── 密钥交换 (Key Exchange)
+│       ├── Diffie-Hellman (DH)
+│       └── ECDH / X25519
 │
 ├── 数据完整性与密钥派生 (Integrity, Auth & KDF)
 │   ├── 密码学哈希 (Cryptographic Hash)
@@ -157,8 +148,7 @@ export const fileSystemData = {
 │   │       ├── zk-STARKs (基于哈希，抗量子)
 │   │       └── Bulletproofs
 │   └── 多方计算 (MPC) 与 同态加密
-│       ├── 基础协议组件
-│       │   └── 不经意传输 (Oblivious Transfer, OT)
+│       ├── 不经意传输 (Oblivious Transfer, OT)
 │       ├── 秘密共享 (Shamir Secret Sharing)
 │       ├── 混淆电路 (Yao's Protocol)
 │       ├── 全同态加密 (CKKS, TFHE)
@@ -392,15 +382,7 @@ export const fileSystemData = {
                     },
                   ],
                 },
-                {
-                  id: "primitives",
-                  name: "基础原语 (Primitives)",
-                  type: "folder",
-                  children: [
-                    { id: "prf", name: "伪随机函数 (PRF)", type: "file" },
-                    { id: "prp", name: "伪随机置换 (PRP)", type: "file" },
-                  ],
-                },
+                { id: "prf", name: "伪随机函数 (PRF)", type: "file" },
               ],
             },
           ],
@@ -536,31 +518,44 @@ export const fileSystemData = {
           type: "folder",
           children: [
             {
-              id: "integer-factorization",
-              name: "基于大整数分解 (Integer Factorization)",
+              id: "public-key-encryption",
+              name: "公钥加密 (Public Key Encryption)",
               type: "folder",
               children: [
                 {
-                  id: "primality-testing",
-                  name: "素性测试与密钥生成 (Primality Testing)",
+                  id: "rsa-encryption",
+                  name: "RSA 加密 (OAEP)",
                   type: "file",
                 },
-                {
-                  id: "rsa-algorithm",
-                  name: "RSA 算法",
-                  type: "folder",
-                  children: [
-                    { id: "pkcs1-v1.5", name: "PKCS#1 v1.5", type: "file" },
-                    { id: "oaep-pss", name: "OAEP / PSS", type: "file" },
-                  ],
-                },
+                { id: "elgamal-encryption", name: "ElGamal 加密", type: "file" },
                 { id: "paillier", name: "Paillier (加法同态)", type: "file" },
-                { id: "rabin", name: "Rabin", type: "file" },
+                { id: "sm2-encryption", name: "SM2 加密", type: "file" },
               ],
             },
             {
-              id: "discrete-logarithm",
-              name: "基于离散对数 (DLP - Finite Fields)",
+              id: "digital-signatures",
+              name: "数字签名 (Digital Signatures)",
+              type: "folder",
+              children: [
+                {
+                  id: "rsa-signatures",
+                  name: "RSA 签名 (PKCS#1 v1.5, PSS)",
+                  type: "file",
+                },
+                { id: "dsa", name: "DSA", type: "file" },
+                {
+                  id: "ecdsa-eddsa",
+                  name: "ECDSA / EdDSA",
+                  type: "file",
+                },
+                { id: "sm2-signature", name: "SM2 签名", type: "file" },
+                { id: "schnorr", name: "Schnorr 签名", type: "file" },
+                { id: "bls", name: "BLS (聚合签名)", type: "file" },
+              ],
+            },
+            {
+              id: "key-exchange",
+              name: "密钥交换 (Key Exchange)",
               type: "folder",
               children: [
                 {
@@ -568,55 +563,7 @@ export const fileSystemData = {
                   name: "Diffie-Hellman (DH)",
                   type: "file",
                 },
-                { id: "dsa", name: "DSA", type: "file" },
-                { id: "elgamal", name: "ElGamal", type: "file" },
-              ],
-            },
-            {
-              id: "elliptic-curve-cryptography",
-              name: "椭圆曲线密码 (ECC - DLP)",
-              type: "folder",
-              children: [
-                {
-                  id: "curve-systems",
-                  name: "曲线体系",
-                  type: "folder",
-                  children: [
-                    {
-                      id: "nist-p-curves",
-                      name: "NIST P-curves (P-256, P-384)",
-                      type: "file",
-                    },
-                    {
-                      id: "bernstein-curves",
-                      name: "Bernstein Curves (Curve25519, Curve448)",
-                      type: "file",
-                    },
-                    { id: "sm2", name: "国密 SM2", type: "file" },
-                  ],
-                },
-                {
-                  id: "core-protocols",
-                  name: "核心协议",
-                  type: "folder",
-                  children: [
-                    { id: "ecdh-x25519", name: "ECDH / X25519", type: "file" },
-                    {
-                      id: "signature-protocols",
-                      name: "签名协议 (ECDSA, EdDSA)",
-                      type: "file",
-                    },
-                  ],
-                },
-                {
-                  id: "pairing-based",
-                  name: "基于配对 (Pairing-based)",
-                  type: "folder",
-                  children: [
-                    { id: "bls", name: "BLS (聚合签名)", type: "file" },
-                    { id: "ibe", name: "IBE (基于身份的加密)", type: "file" },
-                  ],
-                },
+                { id: "ecdh-x25519", name: "ECDH / X25519", type: "file" },
               ],
             },
           ],
@@ -850,16 +797,9 @@ export const fileSystemData = {
               type: "folder",
               children: [
                 {
-                  id: "basic-protocol-components",
-                  name: "基础协议组件",
-                  type: "folder",
-                  children: [
-                    {
-                      id: "oblivious-transfer",
-                      name: "不经意传输 (Oblivious Transfer, OT)",
-                      type: "file",
-                    },
-                  ],
+                  id: "oblivious-transfer",
+                  name: "不经意传输 (Oblivious Transfer, OT)",
+                  type: "file",
                 },
                 {
                   id: "shamir-secret-sharing",
