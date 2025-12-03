@@ -220,6 +220,18 @@ export const fileSystemData = {
                       id: "bqp",
                       name: "BQP (有限误差量子多项式时间)",
                       type: "file",
+                      resources: [
+                        {
+                          title: "Shor's algorithm - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Shor%27s_algorithm",
+                          description: "有些推导是省略了，但是框架搭得很好",
+                        },
+                        {
+                          title: "Shor's algorithm - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1NwS4B6Etw/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，全面的推导，42分钟",
+                        },
+                      ],
                     },
                   ],
                 },
@@ -527,7 +539,11 @@ export const fileSystemData = {
                   name: "RSA 加密 (OAEP)",
                   type: "file",
                 },
-                { id: "elgamal-encryption", name: "ElGamal 加密", type: "file" },
+                {
+                  id: "elgamal-encryption",
+                  name: "ElGamal 加密",
+                  type: "file",
+                },
                 { id: "paillier", name: "Paillier (加法同态)", type: "file" },
                 { id: "sm2-encryption", name: "SM2 加密", type: "file" },
               ],
