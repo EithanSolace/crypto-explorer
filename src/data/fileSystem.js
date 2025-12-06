@@ -20,8 +20,8 @@ export const fileSystemData = {
 │   │   ├── 复杂度类 (Complexity Classes)
 │   │   │   ├── P vs NP 问题 (经典计算基石)
 │   │   │   └── BQP (有限误差量子多项式时间)
-│   │   ├── 单向函数 (One-Way Functions, OWF)
-│   │   └── 陷门置换 (Trapdoor Permutations)
+│   │   ├── 单向函数 (One-Way Function, OWF)
+│   │   ├── 陷门函数 (Trapdoor Function, TDF)
 │   ├── 安全性定义 (Security Definitions)
 │   │   ├── 信息论安全 (Information-Theoretic Security)
 │   │   │   └── 完善保密性 (Perfect Secrecy / OTP)
@@ -236,13 +236,13 @@ export const fileSystemData = {
                   ],
                 },
                 {
-                  id: "one-way-functions",
-                  name: "单向函数 (One-Way Functions, OWF)",
+                  id: "one-way-function",
+                  name: "单向函数 (One-Way Function, OWF)",
                   type: "file",
                 },
                 {
-                  id: "trapdoor-permutations",
-                  name: "陷门置换 (Trapdoor Permutations)",
+                  id: "trapdoor-function",
+                  name: "陷门函数 (Trapdoor Function, TDF)",
                   type: "file",
                 },
               ],
