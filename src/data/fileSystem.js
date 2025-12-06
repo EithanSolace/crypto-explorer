@@ -239,11 +239,25 @@ export const fileSystemData = {
                   id: "one-way-function",
                   name: "单向函数 (One-Way Function, OWF)",
                   type: "file",
+                  resources: [
+                    {
+                      title: "one-way function - Wikipedia",
+                      url: "https://en.wikipedia.org/wiki/One-way_function",
+                      description: "经典Wikipedia起手，没啥好说的",
+                    },
+                  ],
                 },
                 {
                   id: "trapdoor-function",
                   name: "陷门函数 (Trapdoor Function, TDF)",
                   type: "file",
+                  resources: [
+                    {
+                      title: "trapdoor function - Wikipedia",
+                      url: "https://en.wikipedia.org/wiki/Trapdoor_function",
+                      description: "经典Wikipedia起手，没啥好说的",
+                    },
+                  ],
                 },
               ],
             },
