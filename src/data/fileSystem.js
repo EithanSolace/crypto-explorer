@@ -24,7 +24,7 @@ export const fileSystemData = {
 │   │   ├── 陷门函数 (Trapdoor Function, TDF)
 │   ├── 安全性定义 (Security Definitions)
 │   │   ├── 信息论安全 (Information-Theoretic Security)
-│   │   │   └── 完善保密性 (Perfect Secrecy / OTP)
+│   │   │   └── 完美保密 (Perfect Secrecy / OTP)
 │   │   ├── 计算安全性 (Computational Security)
 │   │   │   ├── 语义安全 (Semantic Security)
 │   │   │   └── 不可区分性 (Indistinguishability)
@@ -273,7 +273,7 @@ export const fileSystemData = {
                   children: [
                     {
                       id: "perfect-secrecy",
-                      name: "完善保密性 (Perfect Secrecy / OTP)",
+                      name: "完美保密 (Perfect Secrecy / OTP)",
                       type: "file",
                     },
                   ],
