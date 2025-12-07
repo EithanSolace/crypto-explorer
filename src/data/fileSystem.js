@@ -285,6 +285,23 @@ export const fileSystemData = {
                       id: "perfect-secrecy",
                       name: "完美保密性 (Perfect Secrecy / OTP)",
                       type: "file",
+                      resources: [
+                        {
+                          title: "information-theoretic security - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Information-theoretic_security",
+                          description: "Wikipedia讲的信息论安全",
+                        },
+                        {
+                          title: "one-time pad - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/One-time_pad",
+                          description: "Wikipedia讲的一次一密one-time pad",
+                        },
+                        {
+                          title: "Perfect Secrecy - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1JYmwBxEkq/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，五分钟",
+                        },
+                      ],
                     },
                   ],
                 },
