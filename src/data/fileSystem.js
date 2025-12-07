@@ -245,6 +245,11 @@ export const fileSystemData = {
                       url: "https://en.wikipedia.org/wiki/One-way_function",
                       description: "经典Wikipedia起手，没啥好说的",
                     },
+                    {
+                      title: "one-way function - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1A82XBiEwF/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "中文视频讲解，前半部分是单向函数内容",
+                    },
                   ],
                 },
                 {
@@ -256,6 +261,11 @@ export const fileSystemData = {
                       title: "trapdoor function - Wikipedia",
                       url: "https://en.wikipedia.org/wiki/Trapdoor_function",
                       description: "经典Wikipedia起手，没啥好说的",
+                    },
+                    {
+                      title: "trapdoor function - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1A82XBiEwF/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "中文视频讲解，后半部分是陷门函数内容",
                     },
                   ],
                 },
