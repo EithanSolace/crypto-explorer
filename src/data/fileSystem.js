@@ -32,8 +32,9 @@ export const fileSystemData = {
 │   │   │       ├── IND-CCA1 (非自适应选择密文攻击不可区分)
 │   │   │       └── IND-CCA2 (自适应选择密文攻击不可区分)
 │   │   └── 神谕机模型 (Oracle Models)
+│   │       ├── 标准模型 (Standard Model)
 │   │       ├── 随机神谕机模型 (Random Oracle Model, ROM)
-│   │       └── 标准模型 (Standard Model)
+│   │       └── 量子随机神谕机模型 (Quantum Random Oracle Model, QROM)
 │   ├── 形式化验证 (Formal Verification)
 │   │   ├── 计算机辅助证明工具 (Computer-Aided Tools)
 │   │       ├── Tamarin Prover (基于重写逻辑)
@@ -398,13 +399,18 @@ export const fileSystemData = {
                   type: "folder",
                   children: [
                     {
+                      id: "standard-model",
+                      name: "标准模型 (Standard Model)",
+                      type: "file",
+                    },
+                    {
                       id: "random-oracle-model",
                       name: "随机神谕机模型 (Random Oracle Model, ROM)",
                       type: "file",
                     },
                     {
-                      id: "standard-model",
-                      name: "标准模型 (Standard Model)",
+                      id: "quantum-random-oracle-model",
+                      name: "量子随机神谕机模型 (Quantum Random Oracle Model, QROM)",
                       type: "file",
                     },
                   ],
