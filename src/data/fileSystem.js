@@ -402,16 +402,38 @@ export const fileSystemData = {
                       id: "standard-model",
                       name: "标准模型 (Standard Model)",
                       type: "file",
+                      resources: [
+                        {
+                          title: "Standard Model - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Standard_model_(cryptography)",
+                          description: "看个定义就行",
+                        },
+                      ],
                     },
                     {
                       id: "random-oracle-model",
                       name: "随机神谕机模型 (Random Oracle Model, ROM)",
                       type: "file",
+                      resources: [
+                        {
+                          title: "Random Oracle - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Random_oracle",
+                          description: "看个定义就行",
+                        },
+                      ],
                     },
                     {
                       id: "quantum-random-oracle-model",
                       name: "量子随机神谕机模型 (Quantum Random Oracle Model, QROM)",
                       type: "file",
+                      resources: [
+                        {
+                          title:
+                            "面对量子敌手的随机预言模型研究进展 - 北京邮电大学学报",
+                          url: "https://www.bing.com/ck/a?!&&p=3fe3cf3a77949b159e3dbfe6160a11f09bf7c7196453827e26fa0c1d57385badJmltdHM9MTc2NTE1MjAwMA&ptn=3&ver=2&hsh=4&fclid=0d50d2e4-8212-675f-128d-c76783516619&psq=%e9%87%8f%e5%ad%90%e9%9a%8f%e6%9c%ba%e7%a5%9e%e8%b0%95%e6%9c%ba%e6%a8%a1%e5%9e%8b&u=a1aHR0cHM6Ly9qb3VybmFsLmJ1cHQuZWR1LmNuL0NOL2FydGljbGUvZG93bmxvYWRBcnRpY2xlRmlsZS5kbz9hdHRhY2hUeXBlPVBERiZpZD01MzIx",
+                          description: "这是一个PDF下载链接",
+                        },
+                      ],
                     },
                   ],
                 },
