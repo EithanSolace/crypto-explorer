@@ -15,7 +15,7 @@ export const fileSystemData = {
           content: `
 \`\`\`text
 密码学补完计划
-├── 理论基础与模型 (Foundations & Security Models)
+├── 理论基础 (Foundations)
 │   ├── 计算困难性假设 (Computational Hardness)
 │   │   ├── 复杂度类 (Complexity Classes)
 │   │   │   ├── P vs NP 问题 (经典计算基石)
@@ -187,7 +187,7 @@ export const fileSystemData = {
         },
         {
           id: "foundations",
-          name: "理论基础与模型 (Foundations & Security Models)",
+          name: "理论基础 (Foundations)",
           type: "folder",
           children: [
             {
