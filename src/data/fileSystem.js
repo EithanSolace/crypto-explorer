@@ -207,6 +207,11 @@ export const fileSystemData = {
                           description: "非常全面",
                         },
                         {
+                          title: "Cook-Levin Theorem - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Cook%E2%80%93Levin_theorem",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
                           title: "Cook-Levin Theorem - Bilibili",
                           url: "https://www.bilibili.com/video/BV1NzUDBzEmr/?vd_source=4a6bef24691326e4a995c534ea99f768",
                           description: "中文视频讲解，7分钟不到",
