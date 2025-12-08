@@ -36,10 +36,10 @@ export const fileSystemData = {
 │   │       ├── 随机神谕机模型 (Random Oracle Model, ROM)
 │   │       └── 量子随机神谕机模型 (Quantum Random Oracle Model, QROM)
 │   ├── 形式化验证 (Formal Verification)
-│   │   ├── 计算机辅助证明工具 (Computer-Aided Tools)
-│   │       ├── Tamarin Prover (基于重写逻辑)
-│   │       ├── ProVerif (基于Pi演算)
-│   │       └── EasyCrypt (概率关系逻辑)
+│   │   ├── 计算机辅助安全协议验证工具 (Computer-Aided Security Protocol Verifiers)
+│   │       ├── ProVerif (快、全自动、适合快速验证)
+│   │       ├── Tamarin Prover (精准、可视化好、适合复杂协议)
+│   │       └── EasyCrypt (理论最强、难度极高、适合证明密码学原理)
 │   └── 随机性 (Randomness)
 │       ├── 熵源 (Entropy Source)
 │       │   ├── 物理真随机 (TRNG - 热噪声)
@@ -445,23 +445,23 @@ export const fileSystemData = {
               type: "folder",
               children: [
                 {
-                  id: "computer-aided-tools",
-                  name: "计算机辅助证明工具 (Computer-Aided Tools)",
+                  id: "computer-aided-security-protocol-verifiers",
+                  name: "计算机辅助安全协议验证工具 (Computer-Aided Security Protocol Verifiers)",
                   type: "folder",
                   children: [
                     {
-                      id: "tamarin-prover",
-                      name: "Tamarin Prover (基于重写逻辑)",
+                      id: "proverif",
+                      name: "ProVerif (快、全自动、适合快速验证)",
                       type: "file",
                     },
                     {
-                      id: "proverif",
-                      name: "ProVerif (基于Pi演算)",
+                      id: "tamarin-prover",
+                      name: "Tamarin Prover (精准、可视化好、适合复杂协议)",
                       type: "file",
                     },
                     {
                       id: "easycrypt",
-                      name: "EasyCrypt (概率关系逻辑)",
+                      name: "EasyCrypt (理论最强、难度极高、适合证明密码学原理)",
                       type: "file",
                     },
                   ],
