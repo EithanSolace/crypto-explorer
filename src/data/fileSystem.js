@@ -36,16 +36,12 @@ export const fileSystemData = {
 │   │       ├── 随机神谕机模型 (Random Oracle Model, ROM)
 │   │       └── 量子随机神谕机模型 (Quantum Random Oracle Model, QROM)
 │   ├── 随机性 (Randomness)
-│   │   ├── 熵源 (Entropy Source)
-│   │   │   ├── 物理真随机 (TRNG - 热噪声)
-│   │   │   ├── 量子随机 (Quantum effects)
-│   │   │   └── 物理不可克隆函数 (PUF)
-│   │   ├── 随机数生成器 (Generators)
-│   │   │   ├── 伪随机数生成器 (PRNG)
-│   │   │   └── 密码学安全伪随机生成器 (CSPRNG)
-│   │   │       ├── 前向安全性 (Forward Secrecy)
-│   │   │       └── 回溯抗性 (Backtracking Resistance)
-│   │   └── 伪随机函数 (PRF)
+│   │   ├── 真随机
+│   │   │   └── 熵源 (Entropy Source)
+│   │   └── 伪随机
+│   │       ├── 伪随机生成器 (PRG)
+│   │       │   └──密码学安全伪随机数生成器 (CSPRNG)
+│   │       └── 伪随机函数 (PRF)
 │   └── 形式化验证 (Formal Verification)
 │       └── 计算机辅助安全协议验证工具 (Computer-Aided Security Protocol Verifiers)
 │           ├── ProVerif (快、全自动、适合快速验证)
@@ -445,49 +441,41 @@ export const fileSystemData = {
               type: "folder",
               children: [
                 {
-                  id: "entropy-source",
-                  name: "熵源 (Entropy Source)",
+                  id: "random",
+                  name: "真随机",
                   type: "folder",
                   children: [
                     {
-                      id: "trng",
-                      name: "物理真随机 (TRNG - 热噪声)",
+                      id: "entropy-source",
+                      name: "熵源 (Entropy Source)",
                       type: "file",
                     },
-                    {
-                      id: "quantum-random",
-                      name: "量子随机 (Quantum effects)",
-                      type: "file",
-                    },
-                    { id: "puf", name: "物理不可克隆函数 (PUF)", type: "file" },
                   ],
                 },
                 {
-                  id: "generators",
-                  name: "随机数生成器 (Generators)",
+                  id: "pseudorandom",
+                  name: "伪随机",
                   type: "folder",
                   children: [
-                    { id: "prng", name: "伪随机数生成器 (PRNG)", type: "file" },
                     {
-                      id: "csprng",
-                      name: "密码学安全伪随机生成器 (CSPRNG)",
+                      id: "prg",
+                      name: "伪随机生成器 (PRG)",
                       type: "folder",
                       children: [
                         {
-                          id: "forward-secrecy",
-                          name: "前向安全性 (Forward Secrecy)",
-                          type: "file",
-                        },
-                        {
-                          id: "backtracking-resistance",
-                          name: "回溯抗性 (Backtracking Resistance)",
+                          id: "csprng",
+                          name: "密码学安全伪随机数生成器 (CSPRNG)",
                           type: "file",
                         },
                       ],
                     },
+                    {
+                      id: "prf",
+                      name: "伪随机函数 (PRF)",
+                      type: "file",
+                    },
                   ],
                 },
-                { id: "prf", name: "伪随机函数 (PRF)", type: "file" },
               ],
             },
             {
