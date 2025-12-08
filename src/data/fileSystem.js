@@ -31,8 +31,8 @@ export const fileSystemData = {
 │   │   │       ├── IND-CPA (选择明文攻击不可区分)
 │   │   │       ├── IND-CCA1 (非自适应选择密文攻击不可区分)
 │   │   │       └── IND-CCA2 (自适应选择密文攻击不可区分)
-│   │   └── 预言机模型 (Oracle Models)
-│   │       ├── 随机预言机模型 (Random Oracle Model, ROM)
+│   │   └── 神谕机模型 (Oracle Models)
+│   │       ├── 随机神谕机模型 (Random Oracle Model, ROM)
 │   │       └── 标准模型 (Standard Model)
 │   ├── 形式化验证 (Formal Verification)
 │   │   ├── 计算机辅助证明工具 (Computer-Aided Tools)
@@ -177,7 +177,7 @@ export const fileSystemData = {
     │   ├── 缓存攻击 (Flush+Reload)
     │   └── 故障注入 (Rowhammer)
     └── 协议与实现漏洞
-        ├── 填充预言机 (Padding Oracle)
+        ├── 填充神谕机 (Padding Oracle)
         ├── 随机数重用 (Nonce Reuse)
         ├── 降级攻击 (Logjam, FREAK)
         └── 弱参数配置
@@ -394,12 +394,12 @@ export const fileSystemData = {
                 },
                 {
                   id: "oracle-models",
-                  name: "预言机模型 (Oracle Models)",
+                  name: "神谕机模型 (Oracle Models)",
                   type: "folder",
                   children: [
                     {
                       id: "random-oracle-model",
-                      name: "随机预言机模型 (Random Oracle Model, ROM)",
+                      name: "随机神谕机模型 (Random Oracle Model, ROM)",
                       type: "file",
                     },
                     {
@@ -1049,7 +1049,7 @@ export const fileSystemData = {
               children: [
                 {
                   id: "padding-oracle",
-                  name: "填充预言机 (Padding Oracle)",
+                  name: "填充神谕机 (Padding Oracle)",
                   type: "file",
                 },
                 {
