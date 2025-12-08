@@ -314,6 +314,23 @@ export const fileSystemData = {
                       id: "semantic-security",
                       name: "语义安全 (Semantic Security)",
                       type: "file",
+                      resources: [
+                        {
+                          title: "semantic security - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Semantic_security",
+                          description: "Wikipedia讲的语义安全",
+                        },
+                        {
+                          title: "有关语义安全的那张业界著名的Linux企鹅图",
+                          url: "https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation",
+                          description: "打开Wikipedia链接往下翻就能看到了",
+                        },
+                        {
+                          title: "semantic security - Bilibili",
+                          url: "https://www.bilibili.com/video/BV14x2CB7Emk/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，前半部分是语义安全",
+                        },
+                      ],
                     },
                     {
                       id: "indistinguishability",
@@ -324,16 +341,52 @@ export const fileSystemData = {
                           id: "ind-cpa",
                           name: "IND-CPA (选择明文攻击不可区分)",
                           type: "file",
+                          resources: [
+                            {
+                              title: "Wikipedia",
+                              url: "https://en.wikipedia.org/wiki/Ciphertext_indistinguishability",
+                              description: "经典Wikipedia起手，没啥好说的",
+                            },
+                            {
+                              title: "CPA - Bilibili",
+                              url: "https://www.bilibili.com/video/BV14x2CB7Emk/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                              description: "中文视频讲解，后半部分讲到CPA",
+                            },
+                          ],
                         },
                         {
                           id: "ind-cca1",
                           name: "IND-CCA1 (非自适应选择密文攻击)",
                           type: "file",
+                          resources: [
+                            {
+                              title: "Wikipedia",
+                              url: "https://en.wikipedia.org/wiki/Ciphertext_indistinguishability",
+                              description: "经典Wikipedia起手，没啥好说的",
+                            },
+                            {
+                              title: "CCA1 - Bilibili",
+                              url: "https://www.bilibili.com/video/BV14x2CB7Emk/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                              description: "中文视频讲解，后半部分讲到CCA1",
+                            },
+                          ],
                         },
                         {
                           id: "ind-cca2",
                           name: "IND-CCA2 (自适应选择密文攻击)",
                           type: "file",
+                          resources: [
+                            {
+                              title: "Wikipedia",
+                              url: "https://en.wikipedia.org/wiki/Ciphertext_indistinguishability",
+                              description: "经典Wikipedia起手，没啥好说的",
+                            },
+                            {
+                              title: "CCA2 - Bilibili",
+                              url: "https://www.bilibili.com/video/BV14x2CB7Emk/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                              description: "中文视频讲解，后半部分讲到CCA2",
+                            },
+                          ],
                         },
                       ],
                     },
