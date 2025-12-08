@@ -29,8 +29,8 @@ export const fileSystemData = {
 │   │   │   ├── 语义安全 (Semantic Security)
 │   │   │   └── 不可区分性 (Indistinguishability)
 │   │   │       ├── IND-CPA (选择明文攻击不可区分)
-│   │   │       ├── IND-CCA1 (非自适应选择密文攻击)
-│   │   │       └── IND-CCA2 (自适应选择密文攻击)
+│   │   │       ├── IND-CCA1 (非自适应选择密文攻击不可区分)
+│   │   │       └── IND-CCA2 (自适应选择密文攻击不可区分)
 │   │   └── 预言机模型 (Oracle Models)
 │   │       ├── 随机预言机模型 (Random Oracle Model, ROM)
 │   │       └── 标准模型 (Standard Model)
@@ -356,7 +356,7 @@ export const fileSystemData = {
                         },
                         {
                           id: "ind-cca1",
-                          name: "IND-CCA1 (非自适应选择密文攻击)",
+                          name: "IND-CCA1 (非自适应选择密文攻击不可区分)",
                           type: "file",
                           resources: [
                             {
@@ -373,7 +373,7 @@ export const fileSystemData = {
                         },
                         {
                           id: "ind-cca2",
-                          name: "IND-CCA2 (自适应选择密文攻击)",
+                          name: "IND-CCA2 (自适应选择密文攻击不可区分)",
                           type: "file",
                           resources: [
                             {
