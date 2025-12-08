@@ -21,7 +21,7 @@ export const fileSystemData = {
 │   │   │   ├── P vs NP 问题 (经典计算基石)
 │   │   │   └── BQP (有限误差量子多项式时间)
 │   │   ├── 单向函数 (One-Way Function, OWF)
-│   │   ├── 陷门函数 (Trapdoor Function, TDF)
+│   │   └── 陷门函数 (Trapdoor Function, TDF)
 │   ├── 安全性定义 (Security Definitions)
 │   │   ├── 信息论安全 (Information-Theoretic Security)
 │   │   │   └── 完美保密性 (Perfect Secrecy / OTP)
@@ -35,22 +35,22 @@ export const fileSystemData = {
 │   │       ├── 标准模型 (Standard Model)
 │   │       ├── 随机神谕机模型 (Random Oracle Model, ROM)
 │   │       └── 量子随机神谕机模型 (Quantum Random Oracle Model, QROM)
-│   ├── 形式化验证 (Formal Verification)
-│   │   ├── 计算机辅助安全协议验证工具 (Computer-Aided Security Protocol Verifiers)
-│   │       ├── ProVerif (快、全自动、适合快速验证)
-│   │       ├── Tamarin Prover (精准、可视化好、适合复杂协议)
-│   │       └── EasyCrypt (理论最强、难度极高、适合证明密码学原理)
-│   └── 随机性 (Randomness)
-│       ├── 熵源 (Entropy Source)
-│       │   ├── 物理真随机 (TRNG - 热噪声)
-│       │   ├── 量子随机 (Quantum effects)
-│       │   └── 物理不可克隆函数 (PUF)
-│       ├── 随机数生成器 (Generators)
-│       │   ├── 伪随机数生成器 (PRNG)
-│       │   └── 密码学安全伪随机生成器 (CSPRNG)
-│       │       ├── 前向安全性 (Forward Secrecy)
-│       │       └── 回溯抗性 (Backtracking Resistance)
-│       └── 伪随机函数 (PRF)
+│   ├── 随机性 (Randomness)
+│   │   ├── 熵源 (Entropy Source)
+│   │   │   ├── 物理真随机 (TRNG - 热噪声)
+│   │   │   ├── 量子随机 (Quantum effects)
+│   │   │   └── 物理不可克隆函数 (PUF)
+│   │   ├── 随机数生成器 (Generators)
+│   │   │   ├── 伪随机数生成器 (PRNG)
+│   │   │   └── 密码学安全伪随机生成器 (CSPRNG)
+│   │   │       ├── 前向安全性 (Forward Secrecy)
+│   │   │       └── 回溯抗性 (Backtracking Resistance)
+│   │   └── 伪随机函数 (PRF)
+│   └── 形式化验证 (Formal Verification)
+│       └── 计算机辅助安全协议验证工具 (Computer-Aided Security Protocol Verifiers)
+│           ├── ProVerif (快、全自动、适合快速验证)
+│           ├── Tamarin Prover (精准、可视化好、适合复杂协议)
+│           └── EasyCrypt (理论最强、难度极高、适合证明密码学原理)
 │
 ├── 对称密码原语 (Symmetric Primitives)
 │   ├── 分组密码 (Block Ciphers)
@@ -440,35 +440,6 @@ export const fileSystemData = {
               ],
             },
             {
-              id: "formal-verification",
-              name: "形式化验证 (Formal Verification)",
-              type: "folder",
-              children: [
-                {
-                  id: "computer-aided-security-protocol-verifiers",
-                  name: "计算机辅助安全协议验证工具 (Computer-Aided Security Protocol Verifiers)",
-                  type: "folder",
-                  children: [
-                    {
-                      id: "proverif",
-                      name: "ProVerif (快、全自动、适合快速验证)",
-                      type: "file",
-                    },
-                    {
-                      id: "tamarin-prover",
-                      name: "Tamarin Prover (精准、可视化好、适合复杂协议)",
-                      type: "file",
-                    },
-                    {
-                      id: "easycrypt",
-                      name: "EasyCrypt (理论最强、难度极高、适合证明密码学原理)",
-                      type: "file",
-                    },
-                  ],
-                },
-              ],
-            },
-            {
               id: "randomness",
               name: "随机性 (Randomness)",
               type: "folder",
@@ -517,6 +488,35 @@ export const fileSystemData = {
                   ],
                 },
                 { id: "prf", name: "伪随机函数 (PRF)", type: "file" },
+              ],
+            },
+            {
+              id: "formal-verification",
+              name: "形式化验证 (Formal Verification)",
+              type: "folder",
+              children: [
+                {
+                  id: "computer-aided-security-protocol-verifiers",
+                  name: "计算机辅助安全协议验证工具 (Computer-Aided Security Protocol Verifiers)",
+                  type: "folder",
+                  children: [
+                    {
+                      id: "proverif",
+                      name: "ProVerif (快、全自动、适合快速验证)",
+                      type: "file",
+                    },
+                    {
+                      id: "tamarin-prover",
+                      name: "Tamarin Prover (精准、可视化好、适合复杂协议)",
+                      type: "file",
+                    },
+                    {
+                      id: "easycrypt",
+                      name: "EasyCrypt (理论最强、难度极高、适合证明密码学原理)",
+                      type: "file",
+                    },
+                  ],
+                },
               ],
             },
           ],
