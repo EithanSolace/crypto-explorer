@@ -454,6 +454,13 @@ export const fileSystemData = {
                       id: "entropy-source",
                       name: "熵源 (Entropy Source)",
                       type: "file",
+                      resources: [
+                        {
+                          title: "熵源 - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1C3mtBvEB5/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，六分钟",
+                        },
+                      ],
                     },
                   ],
                 },
