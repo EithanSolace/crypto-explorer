@@ -478,6 +478,37 @@ export const fileSystemData = {
                           id: "csprng",
                           name: "密码学安全伪随机数生成器 (CSPRNG)",
                           type: "file",
+                          resources: [
+                            {
+                              title: "Pseudorandom Generator - Wikipedia",
+                              url: "https://en.wikipedia.org/wiki/Pseudorandom_generator",
+                              description: "经典Wikipedia起手，没啥好说的",
+                            },
+                            {
+                              title: "伪随机生成器PRG - Bilibili",
+                              url: "https://www.bilibili.com/video/BV1dimuBiEgp/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                              description: "中文视频讲解，五分半",
+                            },
+                            {
+                              title:
+                                "Cryptographically secure pseudorandom number generator - Wikipedia",
+                              url: "https://en.wikipedia.org/wiki/Cryptographically_secure_pseudorandom_number_generator",
+                              description: "经典Wikipedia起手，没啥好说的",
+                            },
+                            {
+                              title:
+                                "密码学安全伪随机数生成器CSPRNG - Bilibili",
+                              url: "https://www.bilibili.com/video/BV1gcmEBHEbQ/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                              description: "中文视频讲解，七分半",
+                            },
+                            {
+                              title:
+                                "Recommendation for Random Number Generation Using Deterministic Random Bit Generators - NIST",
+                              url: "https://doi.org/10.6028/NIST.SP.800-90Ar1",
+                              description:
+                                "NIST的官方文档，可以找到预测抗性和回溯抗性的具体定义",
+                            },
+                          ],
                         },
                       ],
                     },
