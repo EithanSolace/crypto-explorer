@@ -516,6 +516,18 @@ export const fileSystemData = {
                       id: "prf",
                       name: "伪随机函数 (PRF)",
                       type: "file",
+                      resources: [
+                        {
+                          title: "Pseudorandom Function Family - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Pseudorandom_function_family",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "PRF - Bilibili",
+                          url: "https://www.bilibili.com/video/BV11fmRB7EqP/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，九分半",
+                        },
+                      ],
                     },
                   ],
                 },
