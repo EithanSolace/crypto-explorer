@@ -75,21 +75,22 @@ export const fileSystemData = {
 │           └── ZUC (现行标准)
 │
 ├── 非对称密码原语 (Asymmetric Primitives)
-│   ├── 公钥加密 (Public Key Encryption)
-│   │   ├── RSA 加密 (OAEP)
-│   │   ├── ElGamal 加密
-│   │   ├── Paillier (加法同态)
-│   │   └── SM2 加密
-│   ├── 数字签名 (Digital Signatures)
-│   │   ├── RSA 签名 (PKCS#1 v1.5, PSS)
-│   │   ├── DSA
-│   │   ├── ECDSA / EdDSA
-│   │   ├── SM2 签名
-│   │   ├── Schnorr 签名
-│   │   └── BLS (聚合签名)
-│   └── 密钥交换 (Key Exchange)
-│       ├── Diffie-Hellman (DH)
-│       └── ECDH / X25519
+│   ├── 基于IFP(大数分解问题)
+│   │   ├── RSA
+│   │   └── Paillier
+│   ├── 基于DLP(离散对数问题)
+│   │   ├── DSA (已淘汰)
+│   │   ├── Diffie-Hellman
+│   │   └── ElGamal
+│   └── 基于ECDLP(椭圆曲线离散对数问题)
+│       ├── NIST体系
+│       │   ├── ECDSA
+│       │   └── ECDH
+│       ├── DJB体系
+│       │   ├── Ed25519
+│       │   └── X25519
+│       └── 国密体系
+│           └── SM2
 │
 ├── 数据完整性与密钥派生 (Integrity, Auth & KDF)
 │   ├── 密码学哈希 (Cryptographic Hash)
@@ -657,56 +658,53 @@ export const fileSystemData = {
           type: "folder",
           children: [
             {
-              id: "public-key-encryption",
-              name: "公钥加密 (Public Key Encryption)",
+              id: "based-on-ifp",
+              name: "基于IFP(大数分解问题)",
               type: "folder",
               children: [
-                {
-                  id: "rsa-encryption",
-                  name: "RSA 加密 (OAEP)",
-                  type: "file",
-                },
-                {
-                  id: "elgamal-encryption",
-                  name: "ElGamal 加密",
-                  type: "file",
-                },
-                { id: "paillier", name: "Paillier (加法同态)", type: "file" },
-                { id: "sm2-encryption", name: "SM2 加密", type: "file" },
+                { id: "rsa", name: "RSA", type: "file" },
+                { id: "paillier", name: "Paillier", type: "file" },
               ],
             },
             {
-              id: "digital-signatures",
-              name: "数字签名 (Digital Signatures)",
+              id: "based-on-dlp",
+              name: "基于DLP(离散对数问题)",
               type: "folder",
               children: [
-                {
-                  id: "rsa-signatures",
-                  name: "RSA 签名 (PKCS#1 v1.5, PSS)",
-                  type: "file",
-                },
-                { id: "dsa", name: "DSA", type: "file" },
-                {
-                  id: "ecdsa-eddsa",
-                  name: "ECDSA / EdDSA",
-                  type: "file",
-                },
-                { id: "sm2-signature", name: "SM2 签名", type: "file" },
-                { id: "schnorr", name: "Schnorr 签名", type: "file" },
-                { id: "bls", name: "BLS (聚合签名)", type: "file" },
+                { id: "dsa", name: "DSA (已淘汰)", type: "file" },
+                { id: "diffie-hellman", name: "Diffie-Hellman", type: "file" },
+                { id: "elgamal", name: "ElGamal", type: "file" },
               ],
             },
             {
-              id: "key-exchange",
-              name: "密钥交换 (Key Exchange)",
+              id: "based-on-ecdlp",
+              name: "基于ECDLP(椭圆曲线离散对数问题)",
               type: "folder",
               children: [
                 {
-                  id: "diffie-hellman",
-                  name: "Diffie-Hellman (DH)",
-                  type: "file",
+                  id: "nist",
+                  name: "NIST体系",
+                  type: "folder",
+                  children: [
+                    { id: "ecdsa", name: "ECDSA", type: "file" },
+                    { id: "ecdh", name: "ECDH", type: "file" },
+                  ],
                 },
-                { id: "ecdh-x25519", name: "ECDH / X25519", type: "file" },
+                {
+                  id: "djb",
+                  name: "DJB体系",
+                  type: "folder",
+                  children: [
+                    { id: "ed25519", name: "Ed25519", type: "file" },
+                    { id: "x25519", name: "X25519", type: "file" },
+                  ],
+                },
+                {
+                  id: "sm2",
+                  name: "国密体系",
+                  type: "folder",
+                  children: [{ id: "sm2", name: "SM2", type: "file" }],
+                },
               ],
             },
           ],
