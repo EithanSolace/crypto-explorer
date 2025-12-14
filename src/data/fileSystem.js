@@ -50,37 +50,29 @@ export const fileSystemData = {
 │
 ├── 对称密码原语 (Symmetric Primitives)
 │   ├── 分组密码 (Block Ciphers)
-│   │   ├── 核心结构 (Core Structures)
-│   │   │   ├── SP网络 (Substitution-Permutation Network)
-│   │   │   ├── Feistel 网络结构
-│   │   │   └── ARX 结构 (Add-Rotate-Xor)
+│   │   ├── 核心结构
+│   │   │   ├── Feistel网络
+│   │   │   └── SP网络 (Substitution-Permutation Network)
 │   │   ├── 现代标准算法
-│   │   │   ├── AES (Rijndael)
+│   │   │   ├── DES (已淘汰)
+│   │   │   ├── AES (国际标准)
 │   │   │   └── SM4 (中国国密标准)
-│   │   └── 轻量级算法 (Lightweight / IoT)
-│   │       ├── PRESENT
-│   │       ├── GIFT
-│   │       └── SKINNY
-│   ├── 流密码 (Stream Ciphers)
-│   │   ├── 现代软件标准
-│   │   │   ├── ChaCha20
-│   │   │   └── Salsa20
-│   │   └── 硬件/专用标准
-│   │       ├── ZUC (祖冲之算法)
-│   │       ├── SNOW 3G
-│   │       └── Trivium
-│   └── 工作模式 (Modes of Operation)
-│       ├── 认证加密 (AEAD - 推荐模式)
-│       │   ├── Encrypt-then-MAC (EtM)
-│       │   ├── AES-GCM
-│       │   ├── AES-CCM
-│       │   └── ChaCha20-Poly1305
-│       ├── 抗 Nonce 误用模式 (Misuse-Resistant)
-│       │   ├── AES-SIV
-│       │   └── AES-GCM-SIV
-│       └── 仅加密模式 (需谨慎使用)
-│           ├── CTR (计数器模式)
-│           └── CBC (密码分组链接)
+│   │   └── 工作模式
+│   │       ├── ECB (已淘汰)
+│   │       ├── CBC (不推荐)
+│   │       ├── CTR (GCM基础)
+│   │       └── GCM (现行标准)
+│   └── 流密码 (Stream Ciphers)
+│       ├── 核心结构
+│       │   ├── (N)LFSR ((non)linear-feedback shift register)
+│       │   └── ARX (Add-Rotate-XOR)
+│       ├── 软件专用算法
+│       │   ├── RC4 (已淘汰)
+│       │   └── ChaCha20 (现行标准)
+│       └── 硬件专用算法
+│           ├── A5/1 (已淘汰)
+│           ├── Trivium (现行标准)
+│           └── ZUC (现行标准)
 │
 ├── 非对称密码原语 (Asymmetric Primitives)
 │   ├── 公钥加密 (Public Key Encryption)
@@ -580,18 +572,13 @@ export const fileSystemData = {
                   type: "folder",
                   children: [
                     {
-                      id: "sp-network",
-                      name: "SP网络 (Substitution-Permutation Network)",
-                      type: "file",
-                    },
-                    {
                       id: "feistel-network",
                       name: "Feistel 网络结构",
                       type: "file",
                     },
                     {
-                      id: "arx-structure",
-                      name: "ARX 结构 (Add-Rotate-Xor)",
+                      id: "sp-network",
+                      name: "SP网络 (Substitution-Permutation Network)",
                       type: "file",
                     },
                   ],
@@ -601,18 +588,20 @@ export const fileSystemData = {
                   name: "现代标准算法",
                   type: "folder",
                   children: [
-                    { id: "aes", name: "AES (Rijndael)", type: "file" },
+                    { id: "des", name: "DES (已淘汰)", type: "file" },
+                    { id: "aes", name: "AES (国际标准)", type: "file" },
                     { id: "sm4", name: "SM4 (中国国密标准)", type: "file" },
                   ],
                 },
                 {
-                  id: "lightweight-algorithms",
-                  name: "轻量级算法 (Lightweight / IoT)",
+                  id: "modes",
+                  name: "工作模式",
                   type: "folder",
                   children: [
-                    { id: "present", name: "PRESENT", type: "file" },
-                    { id: "gift", name: "GIFT", type: "file" },
-                    { id: "skinny", name: "SKINNY", type: "file" },
+                    { id: "ecb", name: "ECB (已淘汰)", type: "file" },
+                    { id: "cbc", name: "CBC (不推荐)", type: "file" },
+                    { id: "ctr", name: "CTR (GCM基础)", type: "file" },
+                    { id: "gcm", name: "GCM (现行标准)", type: "file" },
                   ],
                 },
               ],
@@ -623,66 +612,39 @@ export const fileSystemData = {
               type: "folder",
               children: [
                 {
-                  id: "modern-software-standards",
-                  name: "现代软件标准",
-                  type: "folder",
-                  children: [
-                    { id: "chacha20", name: "ChaCha20", type: "file" },
-                    { id: "salsa20", name: "Salsa20", type: "file" },
-                  ],
-                },
-                {
-                  id: "hardware-dedicated-standards",
-                  name: "硬件/专用标准",
-                  type: "folder",
-                  children: [
-                    { id: "zuc", name: "ZUC (祖冲之算法)", type: "file" },
-                    { id: "snow-3g", name: "SNOW 3G", type: "file" },
-                    { id: "trivium", name: "Trivium", type: "file" },
-                  ],
-                },
-              ],
-            },
-            {
-              id: "modes-of-operation",
-              name: "工作模式 (Modes of Operation)",
-              type: "folder",
-              children: [
-                {
-                  id: "aead",
-                  name: "认证加密 (AEAD - 推荐模式)",
+                  id: "core-structures-stream",
+                  name: "核心结构",
                   type: "folder",
                   children: [
                     {
-                      id: "encrypt-then-mac",
-                      name: "Encrypt-then-MAC (EtM)",
+                      id: "lfsr",
+                      name: "(N)LFSR ((non)linear-feedback shift register)",
                       type: "file",
                     },
-                    { id: "aes-gcm", name: "AES-GCM", type: "file" },
-                    { id: "aes-ccm", name: "AES-CCM", type: "file" },
+                    { id: "arx", name: "ARX (Add-Rotate-XOR)", type: "file" },
+                  ],
+                },
+                {
+                  id: "software-algorithms",
+                  name: "软件专用算法",
+                  type: "folder",
+                  children: [
+                    { id: "rc4", name: "RC4 (已淘汰)", type: "file" },
                     {
-                      id: "chacha20-poly1305",
-                      name: "ChaCha20-Poly1305",
+                      id: "chacha20",
+                      name: "ChaCha20 (现行标准)",
                       type: "file",
                     },
                   ],
                 },
                 {
-                  id: "misuse-resistant",
-                  name: "抗 Nonce 误用模式 (Misuse-Resistant)",
+                  id: "hardware-algorithms",
+                  name: "硬件专用算法",
                   type: "folder",
                   children: [
-                    { id: "aes-siv", name: "AES-SIV", type: "file" },
-                    { id: "aes-gcm-siv", name: "AES-GCM-SIV", type: "file" },
-                  ],
-                },
-                {
-                  id: "encryption-only",
-                  name: "仅加密模式 (需谨慎使用)",
-                  type: "folder",
-                  children: [
-                    { id: "ctr", name: "CTR (计数器模式)", type: "file" },
-                    { id: "cbc", name: "CBC (密码分组链接)", type: "file" },
+                    { id: "a5-1", name: "A5/1 (已淘汰)", type: "file" },
+                    { id: "trivium", name: "Trivium (现行标准)", type: "file" },
+                    { id: "zuc", name: "ZUC (现行标准)", type: "file" },
                   ],
                 },
               ],
