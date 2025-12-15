@@ -75,22 +75,33 @@ export const fileSystemData = {
 │           └── ZUC (现行标准)
 │
 ├── 非对称密码原语 (Asymmetric Primitives)
-│   ├── 基于IFP(大数分解问题)
-│   │   ├── RSA
-│   │   └── Paillier
-│   ├── 基于DLP(离散对数问题)
-│   │   ├── DSA (已淘汰)
-│   │   ├── Diffie-Hellman
-│   │   └── ElGamal
-│   └── 基于ECDLP(椭圆曲线离散对数问题)
-│       ├── NIST体系
-│       │   ├── ECDSA
-│       │   └── ECDH
-│       ├── DJB体系
-│       │   ├── Ed25519
-│       │   └── X25519
-│       └── 国密体系
-│           └── SM2
+│   ├── 经典非对称密码
+│   │   ├── 基于大数分解问题 (IFP-based)
+│   │   │   ├── RSA
+│   │   │   └── Paillier
+│   │   ├── 基于离散对数问题 (DLP-based)
+│   │   │   ├── DSA (已淘汰)
+│   │   │   ├── Diffie-Hellman
+│   │   │   └── ElGamal
+│   │   └── 基于椭圆曲线离散对数问题 (ECDLP-based)
+│   │       ├── NIST体系
+│   │       │   ├── ECDSA
+│   │       │   └── ECDH
+│   │       ├── DJB体系
+│   │       │   ├── Ed25519
+│   │       │   └── X25519
+│   │       └── 国密体系
+│   │           └── SM2
+│   └── 后量子密码 (PQC)
+│       ├── 基于格 (Lattice-based)
+│       │   ├── ML-KEM (Kyber)
+│       │   ├── ML-DSA (Dilithium)
+│       │   └── FN-DSA (Falcon)
+│       ├── 基于哈希 (Hash-based)
+│       │   ├── SLH-DSA (SPHINCS+)
+│       │   └── XMSS & LMS
+│       └── 基于编码 (Code-based)
+│           └── McEliece
 │
 ├── 数据完整性与密钥派生 (Integrity, Auth & KDF)
 │   ├── 密码学哈希 (Cryptographic Hash)
@@ -104,16 +115,6 @@ export const fileSystemData = {
 │   └── 密钥派生与口令哈希 (KDF & Password Hashing)
 │       ├── 密钥提取与扩展 (HKDF)
 │       └── 抗暴力破解/显存困难 (Argon2, scrypt, bcrypt, PBKDF2)
-│
-├── 后量子密码 (Post-Quantum Cryptography) [NIST 标准]
-│   ├── 基于格 (Lattice-based)
-│   │   ├── 密钥封装机制 (ML-KEM / Kyber)
-│   │   └── 数字签名 (ML-DSA / Dilithium, FN-DSA)
-│   ├── 基于哈希 (Hash-based)
-│   │   ├── 无状态签名 (SLH-DSA / SPHINCS+)
-│   │   └── 有状态签名 (XMSS, LMS)
-│   └── 基于编码 (Code-based)
-│       └── McEliece
 │
 ├── 高级协议与隐私计算 (Advanced Protocols & Privacy)
 │   ├── 高级密码组件 (Advanced Building Blocks)
@@ -658,52 +659,117 @@ export const fileSystemData = {
           type: "folder",
           children: [
             {
-              id: "based-on-ifp",
-              name: "基于IFP(大数分解问题)",
-              type: "folder",
-              children: [
-                { id: "rsa", name: "RSA", type: "file" },
-                { id: "paillier", name: "Paillier", type: "file" },
-              ],
-            },
-            {
-              id: "based-on-dlp",
-              name: "基于DLP(离散对数问题)",
-              type: "folder",
-              children: [
-                { id: "dsa", name: "DSA (已淘汰)", type: "file" },
-                { id: "diffie-hellman", name: "Diffie-Hellman", type: "file" },
-                { id: "elgamal", name: "ElGamal", type: "file" },
-              ],
-            },
-            {
-              id: "based-on-ecdlp",
-              name: "基于ECDLP(椭圆曲线离散对数问题)",
+              id: "classical-asymmetric",
+              name: "经典非对称密码",
               type: "folder",
               children: [
                 {
-                  id: "nist",
-                  name: "NIST体系",
+                  id: "based-on-ifp",
+                  name: "基于大数分解问题 (IFP-based)",
                   type: "folder",
                   children: [
-                    { id: "ecdsa", name: "ECDSA", type: "file" },
-                    { id: "ecdh", name: "ECDH", type: "file" },
+                    { id: "rsa", name: "RSA", type: "file" },
+                    { id: "paillier", name: "Paillier", type: "file" },
                   ],
                 },
                 {
-                  id: "djb",
-                  name: "DJB体系",
+                  id: "based-on-dlp",
+                  name: "基于离散对数问题 (DLP-based)",
                   type: "folder",
                   children: [
-                    { id: "ed25519", name: "Ed25519", type: "file" },
-                    { id: "x25519", name: "X25519", type: "file" },
+                    { id: "dsa", name: "DSA (已淘汰)", type: "file" },
+                    {
+                      id: "diffie-hellman",
+                      name: "Diffie-Hellman",
+                      type: "file",
+                    },
+                    { id: "elgamal", name: "ElGamal", type: "file" },
                   ],
                 },
                 {
-                  id: "sm2",
-                  name: "国密体系",
+                  id: "based-on-ecdlp",
+                  name: "基于椭圆曲线离散对数问题 (ECDLP-based)",
                   type: "folder",
-                  children: [{ id: "sm2", name: "SM2", type: "file" }],
+                  children: [
+                    {
+                      id: "nist",
+                      name: "NIST体系",
+                      type: "folder",
+                      children: [
+                        { id: "ecdsa", name: "ECDSA", type: "file" },
+                        { id: "ecdh", name: "ECDH", type: "file" },
+                      ],
+                    },
+                    {
+                      id: "djb",
+                      name: "DJB体系",
+                      type: "folder",
+                      children: [
+                        { id: "ed25519", name: "Ed25519", type: "file" },
+                        { id: "x25519", name: "X25519", type: "file" },
+                      ],
+                    },
+                    {
+                      id: "sm2",
+                      name: "国密体系",
+                      type: "folder",
+                      children: [{ id: "sm2", name: "SM2", type: "file" }],
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              id: "post-quantum-cryptography",
+              name: "后量子密码 (PQC)",
+              type: "folder",
+              children: [
+                {
+                  id: "lattice-based",
+                  name: "基于格 (Lattice-based)",
+                  type: "folder",
+                  children: [
+                    {
+                      id: "ml-kem",
+                      name: "ML-KEM (Kyber)",
+                      type: "file",
+                    },
+                    {
+                      id: "ml-dsa",
+                      name: "ML-DSA (Dilithium)",
+                      type: "file",
+                    },
+                    {
+                      id: "fn-dsa",
+                      name: "FN-DSA (Falcon)",
+                      type: "file",
+                    },
+                  ],
+                },
+                {
+                  id: "hash-based-pqc",
+                  name: "基于哈希 (Hash-based)",
+                  type: "folder",
+                  children: [
+                    {
+                      id: "slh-dsa",
+                      name: "SLH-DSA (SPHINCS+)",
+                      type: "file",
+                    },
+                    {
+                      id: "xmss-lms",
+                      name: "XMSS & LMS",
+                      type: "file",
+                    },
+                  ],
+                },
+                {
+                  id: "code-based",
+                  name: "基于编码 (Code-based)",
+                  type: "folder",
+                  children: [
+                    { id: "mceliece", name: "McEliece", type: "file" },
+                  ],
                 },
               ],
             },
@@ -774,53 +840,6 @@ export const fileSystemData = {
                   type: "file",
                 },
               ],
-            },
-          ],
-        },
-        {
-          id: "post-quantum-cryptography",
-          name: "后量子密码 (Post-Quantum Cryptography) [NIST 标准]",
-          type: "folder",
-          children: [
-            {
-              id: "lattice-based",
-              name: "基于格 (Lattice-based)",
-              type: "folder",
-              children: [
-                {
-                  id: "ml-kem",
-                  name: "密钥封装机制 (ML-KEM / Kyber)",
-                  type: "file",
-                },
-                {
-                  id: "ml-dsa",
-                  name: "数字签名 (ML-DSA / Dilithium, FN-DSA)",
-                  type: "file",
-                },
-              ],
-            },
-            {
-              id: "hash-based-pqc",
-              name: "基于哈希 (Hash-based)",
-              type: "folder",
-              children: [
-                {
-                  id: "stateless-signature",
-                  name: "无状态签名 (SLH-DSA / SPHINCS+)",
-                  type: "file",
-                },
-                {
-                  id: "stateful-signature",
-                  name: "有状态签名 (XMSS, LMS)",
-                  type: "file",
-                },
-              ],
-            },
-            {
-              id: "code-based",
-              name: "基于编码 (Code-based)",
-              type: "folder",
-              children: [{ id: "mceliece", name: "McEliece", type: "file" }],
             },
           ],
         },
