@@ -535,16 +535,37 @@ export const fileSystemData = {
                       id: "proverif",
                       name: "ProVerif (快、全自动、适合快速验证)",
                       type: "file",
+                      resources: [
+                        {
+                          title: "ProVerif",
+                          url: "https://bblanche.gitlabpages.inria.fr/proverif",
+                          description: "官网",
+                        },
+                      ],
                     },
                     {
                       id: "tamarin-prover",
                       name: "Tamarin Prover (精准、可视化好、适合复杂协议)",
                       type: "file",
+                      resources: [
+                        {
+                          title: "Tamarin Prover",
+                          url: "https://tamarin-prover.com",
+                          description: "官网",
+                        },
+                      ],
                     },
                     {
                       id: "easycrypt",
                       name: "EasyCrypt (理论最强、难度极高、适合证明密码学原理)",
                       type: "file",
+                      resources: [
+                        {
+                          title: "EasyCrypt",
+                          url: "https://github.com/EasyCrypt/easycrypt",
+                          description: "Github项目网站",
+                        },
+                      ],
                     },
                   ],
                 },
