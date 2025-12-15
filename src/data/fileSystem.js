@@ -144,23 +144,28 @@ export const fileSystemData = {
 │       │   └── 门限签名 (TSS)
 │       └── 全同态加密 (FHE)
 │
-└── 密码分析与攻击 (Cryptanalysis & Attacks)
-    ├── 数学分析 (Mathematical)
-    │   ├── 统计分析 (差分分析, 线性分析)
-    │   ├── 代数攻击
-    │   ├── 模运算攻击 (Coppersmith Attack)
-    │   └── 量子算法攻击 (Shor, Grover)
-    ├── 侧信道攻击 (Side-Channel)
-    │   ├── 计时攻击
-    │   ├── 功耗分析 (SPA, DPA)
-    │   ├── 电磁分析
-    │   ├── 缓存攻击 (Flush+Reload)
-    │   └── 故障注入 (Rowhammer)
-    └── 协议与实现漏洞
-        ├── 填充神谕机 (Padding Oracle)
+└── 密码分析学 (Cryptanalysis)
+    ├── 数学分析攻击
+    │   ├── 针对对称密码分析
+    │   │   ├── 差分分析 (Differential Cryptanalysis)
+    │   │   ├── 线性分析 (Linear Cryptanalysis)
+    │   │   ├── 彩虹表与时间存储权衡 (Rainbow Tables)
+    │   │   └── Grover算法
+    │   └── 针对非对称密码分析
+    │       ├── 数域筛选法 (攻击IFP&DLP)
+    │       ├── BSGS & Pollard's rho (攻击ECDLP)
+    │       ├── Shor算法 (攻击IFP&DLP&ECDLP)
+    │       └── LLL & BKZ (攻击Lattice)
+    ├── 侧信道攻击 (Side-Channel Attacks)
+    │   ├── 计时攻击 (Timing Attacks)
+    │   ├── 功耗分析 (Power Analysis)
+    │   ├── 电磁攻击 (Electromagnetic Attack)
+    │   └── 故障注入 (Fault Injection)
+    └── 协议与系统漏洞攻击
         ├── 随机数重用 (Nonce Reuse)
-        ├── 降级攻击 (Logjam, FREAK)
-        └── 弱参数配置
+        ├── 填充预言机攻击 (Padding Oracle Attack)
+        ├── 重放攻击 (Replay Attack)
+        └── 降级攻击 (Downgrade Attack)
 \`\`\`
 `,
         },
@@ -931,83 +936,120 @@ export const fileSystemData = {
         },
         {
           id: "cryptanalysis-attacks",
-          name: "密码分析与攻击 (Cryptanalysis & Attacks)",
+          name: "密码分析学 (Cryptanalysis)",
           type: "folder",
           children: [
             {
-              id: "mathematical-analysis",
-              name: "数学分析 (Mathematical)",
+              id: "mathematical-analysis-attacks",
+              name: "数学分析攻击",
               type: "folder",
               children: [
                 {
-                  id: "statistical-analysis",
-                  name: "统计分析 (差分分析, 线性分析)",
-                  type: "file",
+                  id: "symmetric-cryptanalysis",
+                  name: "针对对称密码分析",
+                  type: "folder",
+                  children: [
+                    {
+                      id: "differential-cryptanalysis",
+                      name: "差分分析 (Differential Cryptanalysis)",
+                      type: "file",
+                    },
+                    {
+                      id: "linear-cryptanalysis",
+                      name: "线性分析 (Linear Cryptanalysis)",
+                      type: "file",
+                    },
+                    {
+                      id: "rainbow-tables",
+                      name: "彩虹表与时间存储权衡 (Rainbow Tables)",
+                      type: "file",
+                    },
+                    {
+                      id: "grover-algorithm",
+                      name: "Grover算法",
+                      type: "file",
+                    },
+                  ],
                 },
-                { id: "algebraic-attacks", name: "代数攻击", type: "file" },
                 {
-                  id: "modular-arithmetic-attacks",
-                  name: "模运算攻击 (Coppersmith Attack)",
-                  type: "file",
-                },
-                {
-                  id: "quantum-algorithm-attacks",
-                  name: "量子算法攻击 (Shor, Grover)",
-                  type: "file",
+                  id: "asymmetric-cryptanalysis",
+                  name: "针对非对称密码分析",
+                  type: "folder",
+                  children: [
+                    {
+                      id: "number-field-sieve",
+                      name: "数域筛选法 (攻击IFP&DLP)",
+                      type: "file",
+                    },
+                    {
+                      id: "bsgs-pollard-rho",
+                      name: "BSGS & Pollard's rho (攻击ECDLP)",
+                      type: "file",
+                    },
+                    {
+                      id: "shor-algorithm",
+                      name: "Shor算法 (攻击IFP&DLP&ECDLP)",
+                      type: "file",
+                    },
+                    {
+                      id: "lll-bkz-attack",
+                      name: "LLL & BKZ (攻击Lattice)",
+                      type: "file",
+                    },
+                  ],
                 },
               ],
             },
             {
               id: "side-channel-attacks",
-              name: "侧信道攻击 (Side-Channel)",
+              name: "侧信道攻击 (Side-Channel Attacks)",
               type: "folder",
               children: [
-                { id: "timing-attacks", name: "计时攻击", type: "file" },
+                {
+                  id: "timing-attacks",
+                  name: "计时攻击 (Timing Attacks)",
+                  type: "file",
+                },
                 {
                   id: "power-analysis",
-                  name: "功耗分析 (SPA, DPA)",
+                  name: "功耗分析 (Power Analysis)",
                   type: "file",
                 },
                 {
-                  id: "electromagnetic-analysis",
-                  name: "电磁分析",
-                  type: "file",
-                },
-                {
-                  id: "cache-attacks",
-                  name: "缓存攻击 (Flush+Reload)",
+                  id: "electromagnetic-attack",
+                  name: "电磁攻击 (Electromagnetic Attack)",
                   type: "file",
                 },
                 {
                   id: "fault-injection",
-                  name: "故障注入 (Rowhammer)",
+                  name: "故障注入 (Fault Injection)",
                   type: "file",
                 },
               ],
             },
             {
-              id: "protocol-implementation-vulnerabilities",
-              name: "协议与实现漏洞",
+              id: "protocol-system-vulnerabilities",
+              name: "协议与系统漏洞攻击",
               type: "folder",
               children: [
                 {
-                  id: "padding-oracle",
-                  name: "填充神谕机 (Padding Oracle)",
-                  type: "file",
-                },
-                {
-                  id: "nonce-reuse",
+                  id: "nonce-reuse-attack",
                   name: "随机数重用 (Nonce Reuse)",
                   type: "file",
                 },
                 {
-                  id: "downgrade-attacks",
-                  name: "降级攻击 (Logjam, FREAK)",
+                  id: "padding-oracle-attack",
+                  name: "填充预言机攻击 (Padding Oracle Attack)",
                   type: "file",
                 },
                 {
-                  id: "weak-parameter-configuration",
-                  name: "弱参数配置",
+                  id: "replay-attack",
+                  name: "重放攻击 (Replay Attack)",
+                  type: "file",
+                },
+                {
+                  id: "downgrade-attack",
+                  name: "降级攻击 (Downgrade Attack)",
                   type: "file",
                 },
               ],
