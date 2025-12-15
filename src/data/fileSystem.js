@@ -74,7 +74,7 @@ export const fileSystemData = {
 │           ├── Trivium (现行标准)
 │           └── ZUC (现行标准)
 │
-├── 密码学哈希和消息验证码 (Cryptographic Hash & MAC)
+├── 密码学哈希和消息认证码 (Cryptographic Hash & MAC)
 │   ├── 密码学哈希 (Cryptographic Hash)
 │   │   ├── 核心结构
 │   │   │   ├── Merkle-Damgård 结构
@@ -663,7 +663,7 @@ export const fileSystemData = {
         },
         {
           id: "integrity-auth-kdf",
-          name: "密码学哈希和消息验证码 (Cryptographic Hash & MAC)",
+          name: "密码学哈希和消息认证码 (Cryptographic Hash & MAC)",
           type: "folder",
           children: [
             {
