@@ -564,7 +564,7 @@ export const fileSystemData = {
               children: [
                 {
                   id: "core-structures",
-                  name: "核心结构 (Core Structures)",
+                  name: "核心结构",
                   type: "folder",
                   children: [
                     {
