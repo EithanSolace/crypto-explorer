@@ -48,14 +48,14 @@ export const fileSystemData = {
 │           ├── Tamarin Prover (精准、可视化好、适合复杂协议)
 │           └── EasyCrypt (理论最强、难度极高、适合证明密码学原理)
 │
-├── 对称密码原语 (Symmetric Primitives)
+├── 对称密码 (Symmetric)
 │   ├── 分组密码 (Block Ciphers)
 │   │   ├── 核心结构
 │   │   │   ├── Feistel网络
 │   │   │   └── SP网络 (Substitution-Permutation Network)
 │   │   ├── 现代标准算法
 │   │   │   ├── DES (已淘汰)
-│   │   │   ├── AES (国际标准)
+│   │   │   ├── AES (现行标准)
 │   │   │   └── SM4 (中国国密标准)
 │   │   └── 工作模式
 │   │       ├── ECB (已淘汰)
@@ -74,7 +74,28 @@ export const fileSystemData = {
 │           ├── Trivium (现行标准)
 │           └── ZUC (现行标准)
 │
-├── 非对称密码原语 (Asymmetric Primitives)
+├── 密码学哈希和消息验证码 (Cryptographic Hash & MAC)
+│   ├── 密码学哈希 (Cryptographic Hash)
+│   │   ├── 核心结构
+│   │   │   ├── Merkle-Damgård 结构
+│   │   │   └── Sponge function (海绵结构)
+│   │   └── 现代标准算法
+│   │       ├── MD5 (已淘汰)
+│   │       ├── SHA-1 (已淘汰)
+│   │       ├── SHA-2 (现行标准)
+│   │       ├── SHA-3 (下一代标准)
+│   │       └── SM3 (中国国密标准)
+│   ├── 消息认证码 (MAC)
+│   │   ├── HMAC
+│   │   ├── CMAC
+│   │   └── GMAC(硬件) & Poly1305(软件)
+│   ├── 密钥派生函数 (KDF)
+│   │   └── HKDF
+│   └── 口令哈希 (Password Hashing)
+│       ├── PBKDF2
+│       └── Argon2
+│
+├── 非对称密码 (Asymmetric)
 │   ├── 经典非对称密码
 │   │   ├── 基于大数分解问题 (IFP-based)
 │   │   │   ├── RSA
@@ -102,19 +123,6 @@ export const fileSystemData = {
 │       │   └── XMSS & LMS
 │       └── 基于编码 (Code-based)
 │           └── McEliece
-│
-├── 数据完整性与密钥派生 (Integrity, Auth & KDF)
-│   ├── 密码学哈希 (Cryptographic Hash)
-│   │   ├── Merkle-Damgård 结构 (SHA-2, SM3)
-│   │   ├── 海绵结构 (SHA-3, SHAKE)
-│   │   └── 常见攻击 (碰撞攻击, 长度扩展攻击)
-│   ├── 消息认证码 (MAC)
-│   │   ├── 基于哈希 (HMAC, KMAC)
-│   │   ├── 基于密码 (CMAC, GMAC)
-│   │   └── 通用哈希 (Poly1305)
-│   └── 密钥派生与口令哈希 (KDF & Password Hashing)
-│       ├── 密钥提取与扩展 (HKDF)
-│       └── 抗暴力破解/显存困难 (Argon2, scrypt, bcrypt, PBKDF2)
 │
 ├── 高级协议与隐私计算 (Advanced Protocols & Privacy)
 │   ├── 高级密码组件 (Advanced Building Blocks)
@@ -560,7 +568,7 @@ export const fileSystemData = {
         },
         {
           id: "symmetric-primitives",
-          name: "对称密码原语 (Symmetric Primitives)",
+          name: "对称密码 (Symmetric)",
           type: "folder",
           children: [
             {
@@ -591,7 +599,7 @@ export const fileSystemData = {
                   type: "folder",
                   children: [
                     { id: "des", name: "DES (已淘汰)", type: "file" },
-                    { id: "aes", name: "AES (国际标准)", type: "file" },
+                    { id: "aes", name: "AES (现行标准)", type: "file" },
                     { id: "sm4", name: "SM4 (中国国密标准)", type: "file" },
                   ],
                 },
@@ -654,8 +662,80 @@ export const fileSystemData = {
           ],
         },
         {
+          id: "integrity-auth-kdf",
+          name: "密码学哈希和消息验证码 (Cryptographic Hash & MAC)",
+          type: "folder",
+          children: [
+            {
+              id: "cryptographic-hash",
+              name: "密码学哈希 (Cryptographic Hash)",
+              type: "folder",
+              children: [
+                {
+                  id: "core-structures-hash",
+                  name: "核心结构",
+                  type: "folder",
+                  children: [
+                    {
+                      id: "merkle-damgard",
+                      name: "Merkle-Damgård 结构",
+                      type: "file",
+                    },
+                    {
+                      id: "sponge-structure",
+                      name: "Sponge function (海绵结构)",
+                      type: "file",
+                    },
+                  ],
+                },
+                {
+                  id: "modern-hash-algorithms",
+                  name: "现代标准算法",
+                  type: "folder",
+                  children: [
+                    { id: "md5", name: "MD5 (已淘汰)", type: "file" },
+                    { id: "sha1", name: "SHA-1 (已淘汰)", type: "file" },
+                    { id: "sha2", name: "SHA-2 (现行标准)", type: "file" },
+                    { id: "sha3", name: "SHA-3 (下一代标准)", type: "file" },
+                    { id: "sm3", name: "SM3 (中国国密标准)", type: "file" },
+                  ],
+                },
+              ],
+            },
+            {
+              id: "message-authentication-codes",
+              name: "消息认证码 (MAC)",
+              type: "folder",
+              children: [
+                { id: "hmac", name: "HMAC", type: "file" },
+                { id: "cmac", name: "CMAC", type: "file" },
+                {
+                  id: "poly-gmac",
+                  name: "GMAC(硬件) & Poly1305(软件)",
+                  type: "file",
+                },
+              ],
+            },
+            {
+              id: "kdf",
+              name: "密钥派生函数 (KDF)",
+              type: "folder",
+              children: [{ id: "hkdf", name: "HKDF", type: "file" }],
+            },
+            {
+              id: "password-hashing",
+              name: "口令哈希 (Password Hashing)",
+              type: "folder",
+              children: [
+                { id: "pbkdf2", name: "PBKDF2", type: "file" },
+                { id: "argon2", name: "Argon2", type: "file" },
+              ],
+            },
+          ],
+        },
+        {
           id: "asymmetric-primitives",
-          name: "非对称密码原语 (Asymmetric Primitives)",
+          name: "非对称密码 (Asymmetric)",
           type: "folder",
           children: [
             {
@@ -770,74 +850,6 @@ export const fileSystemData = {
                   children: [
                     { id: "mceliece", name: "McEliece", type: "file" },
                   ],
-                },
-              ],
-            },
-          ],
-        },
-        {
-          id: "integrity-auth-kdf",
-          name: "数据完整性与密钥派生 (Integrity, Auth & KDF)",
-          type: "folder",
-          children: [
-            {
-              id: "cryptographic-hash",
-              name: "密码学哈希 (Cryptographic Hash)",
-              type: "folder",
-              children: [
-                {
-                  id: "merkle-damgard",
-                  name: "Merkle-Damgård 结构 (SHA-2, SM3)",
-                  type: "file",
-                },
-                {
-                  id: "sponge-structure",
-                  name: "海绵结构 (SHA-3, SHAKE)",
-                  type: "file",
-                },
-                {
-                  id: "common-attacks",
-                  name: "常见攻击 (碰撞攻击, 长度扩展攻击)",
-                  type: "file",
-                },
-              ],
-            },
-            {
-              id: "message-authentication-codes",
-              name: "消息认证码 (MAC)",
-              type: "folder",
-              children: [
-                {
-                  id: "hash-based-mac",
-                  name: "基于哈希 (HMAC, KMAC)",
-                  type: "file",
-                },
-                {
-                  id: "cipher-based-mac",
-                  name: "基于密码 (CMAC, GMAC)",
-                  type: "file",
-                },
-                {
-                  id: "universal-hash",
-                  name: "通用哈希 (Poly1305)",
-                  type: "file",
-                },
-              ],
-            },
-            {
-              id: "kdf-password-hashing",
-              name: "密钥派生与口令哈希 (KDF & Password Hashing)",
-              type: "folder",
-              children: [
-                {
-                  id: "key-extraction-expansion",
-                  name: "密钥提取与扩展 (HKDF)",
-                  type: "file",
-                },
-                {
-                  id: "anti-brute-force",
-                  name: "抗暴力破解/显存困难 (Argon2, scrypt, bcrypt, PBKDF2)",
-                  type: "file",
                 },
               ],
             },
