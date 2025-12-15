@@ -96,7 +96,7 @@ export const fileSystemData = {
 │       └── Argon2
 │
 ├── 非对称密码 (Asymmetric)
-│   ├── 经典非对称密码
+│   ├── 经典公钥密码
 │   │   ├── 基于大数分解问题 (IFP-based)
 │   │   │   ├── RSA
 │   │   │   └── Paillier
@@ -136,7 +136,7 @@ export const fileSystemData = {
 │   │   ├── QUIC
 │   │   ├── SSH
 │   │   └── Signal Protocol
-│   └── 数据计算协议
+│   └── 数据计算协议 (隐私计算)
 │       ├── 零知识证明 (ZKP)
 │       ├── 安全多方计算 (MPC)
 │       │   ├── 混淆电路 (Garbled Circuits)
@@ -146,12 +146,12 @@ export const fileSystemData = {
 │
 └── 密码分析学 (Cryptanalysis)
     ├── 数学分析攻击
-    │   ├── 针对对称密码分析
+    │   ├── 针对对称密码
     │   │   ├── 差分分析 (Differential Cryptanalysis)
     │   │   ├── 线性分析 (Linear Cryptanalysis)
     │   │   ├── 彩虹表与时间存储权衡 (Rainbow Tables)
     │   │   └── Grover算法
-    │   └── 针对非对称密码分析
+    │   └── 针对公钥密码
     │       ├── 数域筛选法 (攻击IFP&DLP)
     │       ├── BSGS & Pollard's rho (攻击ECDLP)
     │       ├── Shor算法 (攻击IFP&DLP&ECDLP)
@@ -726,7 +726,7 @@ export const fileSystemData = {
           children: [
             {
               id: "classical-asymmetric",
-              name: "经典非对称密码",
+              name: "经典公钥密码",
               type: "folder",
               children: [
                 {
@@ -895,7 +895,7 @@ export const fileSystemData = {
             },
             {
               id: "data-computation-protocols",
-              name: "数据计算协议",
+              name: "数据计算协议 (隐私计算)",
               type: "folder",
               children: [
                 {
@@ -946,7 +946,7 @@ export const fileSystemData = {
               children: [
                 {
                   id: "symmetric-cryptanalysis",
-                  name: "针对对称密码分析",
+                  name: "针对对称密码",
                   type: "folder",
                   children: [
                     {
@@ -973,7 +973,7 @@ export const fileSystemData = {
                 },
                 {
                   id: "asymmetric-cryptanalysis",
-                  name: "针对非对称密码分析",
+                  name: "针对公钥密码",
                   type: "folder",
                   children: [
                     {
