@@ -124,34 +124,25 @@ export const fileSystemData = {
 │       └── 基于编码 (Code-based)
 │           └── McEliece
 │
-├── 高级协议与隐私计算 (Advanced Protocols & Privacy)
-│   ├── 高级密码组件 (Advanced Building Blocks)
+├── 高级密码协议 (Advanced Cryptographic Protocols)
+│   ├── 高级密码协议组件
 │   │   ├── 承诺方案 (Commitment Schemes)
-│   │   │   ├── Pedersen Commitment (基于离散对数，同态性)
-│   │   │   └── Hash-based Commitment (基于哈希)
-│   │   ├── 可验证随机函数 (VRF)
-│   │   │   ├── EC-VRF (Algorand/Cardano 使用)
-│   │   │   └── 验证特性 (Verifiability vs Pseudorandomness)
-│   │   └── 累加器 (Accumulators)
-│   │       ├── RSA Accumulators
-│   │       └── Merkle Tree (最基础的累加器形式)
-│   ├── 安全传输协议
-│   │   ├── TLS 1.3
+│   │   ├── 秘密共享 (Secret Sharing)
+│   │   ├── 不经意传输 (Oblivious Transfer)
+│   │   ├── 累加器 (Accumulators)
+│   │   └── 可验证随机函数 (VRF)
+│   ├── 数据传输协议
+│   │   ├── TLS 1.3 (SSL继任者)
 │   │   ├── QUIC
-│   │   ├── Signal Protocol
-│   │   └── SSH
-│   ├── 零知识证明 (Zero-Knowledge Proofs)
-│   │   ├── 交互式证明 (Sigma Protocols)
-│   │   └── 非交互式证明 (NIZK)
-│   │       ├── zk-SNARKs (Groth16, Plonk)
-│   │       ├── zk-STARKs (基于哈希，抗量子)
-│   │       └── Bulletproofs
-│   └── 多方计算 (MPC) 与 同态加密
-│       ├── 不经意传输 (Oblivious Transfer, OT)
-│       ├── 秘密共享 (Shamir Secret Sharing)
-│       ├── 混淆电路 (Yao's Protocol)
-│       ├── 全同态加密 (CKKS, TFHE)
-│       └── 隐私集合求交 (PSI)
+│   │   ├── SSH
+│   │   └── Signal Protocol
+│   └── 数据计算协议
+│       ├── 零知识证明 (ZKP)
+│       ├── 安全多方计算 (MPC)
+│       │   ├── 混淆电路 (Garbled Circuits)
+│       │   ├── 隐私集合求交 (PSI)
+│       │   └── 门限签名 (TSS)
+│       └── 全同态加密 (FHE)
 │
 └── 密码分析与攻击 (Cryptanalysis & Attacks)
     ├── 数学分析 (Mathematical)
@@ -847,140 +838,91 @@ export const fileSystemData = {
         },
         {
           id: "advanced-protocols-privacy",
-          name: "高级协议与隐私计算 (Advanced Protocols & Privacy)",
+          name: "高级密码协议 (Advanced Cryptographic Protocols)",
           type: "folder",
           children: [
             {
               id: "advanced-building-blocks",
-              name: "高级密码组件 (Advanced Building Blocks)",
+              name: "高级密码协议组件",
               type: "folder",
               children: [
                 {
                   id: "commitment-schemes",
                   name: "承诺方案 (Commitment Schemes)",
-                  type: "folder",
-                  children: [
-                    {
-                      id: "pedersen-commitment",
-                      name: "Pedersen Commitment (基于离散对数，同态性)",
-                      type: "file",
-                    },
-                    {
-                      id: "hash-based-commitment",
-                      name: "Hash-based Commitment (基于哈希)",
-                      type: "file",
-                    },
-                  ],
+                  type: "file",
                 },
                 {
-                  id: "verifiable-random-functions",
-                  name: "可验证随机函数 (VRF)",
-                  type: "folder",
-                  children: [
-                    {
-                      id: "ec-vrf",
-                      name: "EC-VRF (Algorand/Cardano 使用)",
-                      type: "file",
-                    },
-                    {
-                      id: "verifiability-vs-pseudorandomness",
-                      name: "验证特性 (Verifiability vs Pseudorandomness)",
-                      type: "file",
-                    },
-                  ],
+                  id: "secret-sharing",
+                  name: "秘密共享 (Secret Sharing)",
+                  type: "file",
+                },
+                {
+                  id: "oblivious-transfer",
+                  name: "不经意传输 (Oblivious Transfer)",
+                  type: "file",
                 },
                 {
                   id: "accumulators",
                   name: "累加器 (Accumulators)",
-                  type: "folder",
-                  children: [
-                    {
-                      id: "rsa-accumulators",
-                      name: "RSA Accumulators",
-                      type: "file",
-                    },
-                    {
-                      id: "merkle-tree",
-                      name: "Merkle Tree (最基础的累加器形式)",
-                      type: "file",
-                    },
-                  ],
+                  type: "file",
+                },
+                {
+                  id: "verifiable-random-functions",
+                  name: "可验证随机函数 (VRF)",
+                  type: "file",
                 },
               ],
             },
             {
-              id: "secure-transport-protocols",
-              name: "安全传输协议",
+              id: "data-transmission-protocols",
+              name: "数据传输协议",
               type: "folder",
               children: [
-                { id: "tls-1.3", name: "TLS 1.3", type: "file" },
+                { id: "tls-1.3", name: "TLS 1.3 (SSL继任者)", type: "file" },
                 { id: "quic", name: "QUIC", type: "file" },
+                { id: "ssh", name: "SSH", type: "file" },
                 {
                   id: "signal-protocol",
                   name: "Signal Protocol",
                   type: "file",
                 },
-                { id: "ssh", name: "SSH", type: "file" },
               ],
             },
             {
-              id: "zero-knowledge-proofs",
-              name: "零知识证明 (Zero-Knowledge Proofs)",
+              id: "data-computation-protocols",
+              name: "数据计算协议",
               type: "folder",
               children: [
                 {
-                  id: "interactive-proofs",
-                  name: "交互式证明 (Sigma Protocols)",
+                  id: "zero-knowledge-proofs",
+                  name: "零知识证明 (ZKP)",
                   type: "file",
                 },
                 {
-                  id: "non-interactive-proofs",
-                  name: "非交互式证明 (NIZK)",
+                  id: "secure-multiparty-computation",
+                  name: "安全多方计算 (MPC)",
                   type: "folder",
                   children: [
                     {
-                      id: "zk-snarks",
-                      name: "zk-SNARKs (Groth16, Plonk)",
+                      id: "garbled-circuits",
+                      name: "混淆电路 (Garbled Circuits)",
                       type: "file",
                     },
                     {
-                      id: "zk-starks",
-                      name: "zk-STARKs (基于哈希，抗量子)",
+                      id: "private-set-intersection",
+                      name: "隐私集合求交 (PSI)",
                       type: "file",
                     },
-                    { id: "bulletproofs", name: "Bulletproofs", type: "file" },
+                    {
+                      id: "threshold-signature-scheme",
+                      name: "门限签名 (TSS)",
+                      type: "file",
+                    },
                   ],
-                },
-              ],
-            },
-            {
-              id: "mpc-homomorphic-encryption",
-              name: "多方计算 (MPC) 与 同态加密",
-              type: "folder",
-              children: [
-                {
-                  id: "oblivious-transfer",
-                  name: "不经意传输 (Oblivious Transfer, OT)",
-                  type: "file",
-                },
-                {
-                  id: "shamir-secret-sharing",
-                  name: "秘密共享 (Shamir Secret Sharing)",
-                  type: "file",
-                },
-                {
-                  id: "yaos-protocol",
-                  name: "混淆电路 (Yao's Protocol)",
-                  type: "file",
                 },
                 {
                   id: "fully-homomorphic-encryption",
-                  name: "全同态加密 (CKKS, TFHE)",
-                  type: "file",
-                },
-                {
-                  id: "private-set-intersection",
-                  name: "隐私集合求交 (PSI)",
+                  name: "全同态加密 (FHE)",
                   type: "file",
                 },
               ],
