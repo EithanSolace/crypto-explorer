@@ -153,16 +153,6 @@ export const fileSystemData = {
 │       ├── 全同态加密 (CKKS, TFHE)
 │       └── 隐私集合求交 (PSI)
 │
-├── 密钥管理与基础设施 (Key Management & PKI)
-│   ├── 公钥基础设施 (PKI)
-│   │   ├── 信任模型 (X.509, Web of Trust)
-│   │   ├── 增强机制 (证书透明度)
-│   │   └── 撤销机制 (CRL, OCSP, OCSP Stapling)
-│   └── 密钥生命周期
-│       ├── 生成与保护 (HSM, TEE, TPM)
-│       ├── 交换格式 (PKCS#12, JWK)
-│       └── 销毁 (Crypto-shredding)
-│
 └── 密码分析与攻击 (Cryptanalysis & Attacks)
     ├── 数学分析 (Mathematical)
     │   ├── 统计分析 (差分分析, 线性分析)
@@ -991,57 +981,6 @@ export const fileSystemData = {
                 {
                   id: "private-set-intersection",
                   name: "隐私集合求交 (PSI)",
-                  type: "file",
-                },
-              ],
-            },
-          ],
-        },
-        {
-          id: "key-management-infrastructure",
-          name: "密钥管理与基础设施 (Key Management & PKI)",
-          type: "folder",
-          children: [
-            {
-              id: "public-key-infrastructure",
-              name: "公钥基础设施 (PKI)",
-              type: "folder",
-              children: [
-                {
-                  id: "trust-models",
-                  name: "信任模型 (X.509, Web of Trust)",
-                  type: "file",
-                },
-                {
-                  id: "enhancement-mechanisms",
-                  name: "增强机制 (证书透明度)",
-                  type: "file",
-                },
-                {
-                  id: "revocation-mechanisms",
-                  name: "撤销机制 (CRL, OCSP, OCSP Stapling)",
-                  type: "file",
-                },
-              ],
-            },
-            {
-              id: "key-lifecycle",
-              name: "密钥生命周期",
-              type: "folder",
-              children: [
-                {
-                  id: "generation-protection",
-                  name: "生成与保护 (HSM, TEE, TPM)",
-                  type: "file",
-                },
-                {
-                  id: "exchange-formats",
-                  name: "交换格式 (PKCS#12, JWK)",
-                  type: "file",
-                },
-                {
-                  id: "destruction",
-                  name: "销毁 (Crypto-shredding)",
                   type: "file",
                 },
               ],
