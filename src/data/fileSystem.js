@@ -590,8 +590,20 @@ export const fileSystemData = {
                   children: [
                     {
                       id: "feistel-network",
-                      name: "Feistel 网络结构",
+                      name: "Feistel 网络",
                       type: "file",
+                      resources: [
+                        {
+                          title: "Feistel Cipher - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Feistel_cipher",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "Feistel网络 - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1gDqVBjE6n/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，十二分钟",
+                        },
+                      ],
                     },
                     {
                       id: "sp-network",
