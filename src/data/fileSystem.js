@@ -609,6 +609,18 @@ export const fileSystemData = {
                       id: "sp-network",
                       name: "SP网络 (Substitution-Permutation Network)",
                       type: "file",
+                      resources: [
+                        {
+                          title: "SP Network - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Substitution%E2%80%93permutation_network",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "SP网络 - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1nfqrByE14/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，十七分钟",
+                        },
+                      ],
                     },
                   ],
                 },
