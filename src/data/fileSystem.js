@@ -629,9 +629,67 @@ export const fileSystemData = {
                   name: "现代标准算法",
                   type: "folder",
                   children: [
-                    { id: "des", name: "DES (已淘汰)", type: "file" },
-                    { id: "aes", name: "AES (现行标准)", type: "file" },
-                    { id: "sm4", name: "SM4 (中国国密标准)", type: "file" },
+                    {
+                      id: "des",
+                      name: "DES (已淘汰)",
+                      type: "file",
+                      resources: [
+                        {
+                          title: "DES - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Data_Encryption_Standard",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "DES - NIST",
+                          url: "https://csrc.nist.gov/files/pubs/fips/46-3/final/docs/fips46-3.pdf",
+                          description: "NIST官方文档，详细说明DES算法",
+                        },
+                        {
+                          title: "DES - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1D7vtB7ERE/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，十四分钟",
+                        },
+                      ],
+                    },
+                    {
+                      id: "aes",
+                      name: "AES (现行标准)",
+                      type: "file",
+                      resources: [
+                        {
+                          title: "AES - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Advanced_Encryption_Standard",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "AES(前篇) - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1HcvXBKE3B/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解(前篇)，十分半",
+                        },
+                        {
+                          title: "AES(后篇) - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1xjizBrEJg/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解(后篇)，十分半",
+                        },
+                      ],
+                    },
+                    {
+                      id: "sm4",
+                      name: "SM4 (中国国密标准)",
+                      type: "file",
+                      resources: [
+                        {
+                          title: "SM4 - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/SM4_(cipher)",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "国密SM4 - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1nPi4BwEaY/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，七分钟",
+                        },
+                      ],
+                    },
                   ],
                 },
                 {
