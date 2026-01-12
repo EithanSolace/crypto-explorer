@@ -64,15 +64,16 @@ export const fileSystemData = {
 │   │       └── GCM (现行标准)
 │   └── 流密码 (Stream Ciphers)
 │       ├── 核心结构
-│       │   ├── (N)LFSR ((non)linear-feedback shift register)
+│       │   ├── 线性反馈移位寄存器 (LFSR)
+│       │   ├── 非线性反馈移位寄存器 (NLFSR)
 │       │   └── ARX (Add-Rotate-XOR)
-│       ├── 软件专用算法
-│       │   ├── RC4 (已淘汰)
-│       │   └── ChaCha20 (现行标准)
-│       └── 硬件专用算法
-│           ├── A5/1 (已淘汰)
-│           ├── Trivium (现行标准)
-│           └── ZUC (现行标准)
+│       ├── 硬件专用算法
+│       │   ├── A5/1 (已淘汰)
+│       │   ├── Trivium (现行标准)
+│       │   └── ZUC (现行标准)
+│       └── 软件专用算法
+│           ├── RC4 (已淘汰)
+│           └── ChaCha20 (现行标准)
 │
 ├── 密码学哈希和消息认证码 (Cryptographic Hash & MAC)
 │   ├── 密码学哈希 (Cryptographic Hash)
