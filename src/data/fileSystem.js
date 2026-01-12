@@ -718,10 +718,25 @@ export const fileSystemData = {
                   children: [
                     {
                       id: "lfsr",
-                      name: "(N)LFSR ((non)linear-feedback shift register)",
+                      name: "线性反馈移位寄存器 (LFSR)",
+                      type: "file",
+                    },
+                    {
+                      id: "nlfsr",
+                      name: "非线性反馈移位寄存器 (NLFSR)",
                       type: "file",
                     },
                     { id: "arx", name: "ARX (Add-Rotate-XOR)", type: "file" },
+                  ],
+                },
+                {
+                  id: "hardware-algorithms",
+                  name: "硬件专用算法",
+                  type: "folder",
+                  children: [
+                    { id: "a5-1", name: "A5/1 (已淘汰)", type: "file" },
+                    { id: "trivium", name: "Trivium (现行标准)", type: "file" },
+                    { id: "zuc", name: "ZUC (现行标准)", type: "file" },
                   ],
                 },
                 {
@@ -735,16 +750,6 @@ export const fileSystemData = {
                       name: "ChaCha20 (现行标准)",
                       type: "file",
                     },
-                  ],
-                },
-                {
-                  id: "hardware-algorithms",
-                  name: "硬件专用算法",
-                  type: "folder",
-                  children: [
-                    { id: "a5-1", name: "A5/1 (已淘汰)", type: "file" },
-                    { id: "trivium", name: "Trivium (现行标准)", type: "file" },
-                    { id: "zuc", name: "ZUC (现行标准)", type: "file" },
                   ],
                 },
               ],
