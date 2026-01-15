@@ -150,7 +150,7 @@ export const fileSystemData = {
     │   ├── 针对对称密码
     │   │   ├── 差分分析 (Differential Cryptanalysis)
     │   │   ├── 线性分析 (Linear Cryptanalysis)
-    │   │   ├── 彩虹表与时间存储权衡 (Rainbow Tables)
+    │   │   ├── 彩虹表 (Rainbow Tables)
     │   │   └── Grover算法
     │   └── 针对公钥密码
     │       ├── 数域筛选法 (攻击IFP&DLP)
@@ -1070,7 +1070,7 @@ export const fileSystemData = {
                     },
                     {
                       id: "rainbow-tables",
-                      name: "彩虹表与时间存储权衡 (Rainbow Tables)",
+                      name: "彩虹表 (Rainbow Tables)",
                       type: "file",
                     },
                     {
