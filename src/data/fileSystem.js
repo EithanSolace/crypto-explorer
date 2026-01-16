@@ -751,11 +751,45 @@ export const fileSystemData = {
                       id: "lfsr",
                       name: "线性反馈移位寄存器 (LFSR)",
                       type: "file",
+                      resources: [
+                        {
+                          title: "LFSR - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Linear-feedback_shift_register",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "线性反馈移位寄存器LFSR - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1YjrGBxE59/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，十一分钟",
+                        },
+                      ],
                     },
                     {
                       id: "nlfsr",
                       name: "非线性反馈移位寄存器 (NLFSR)",
                       type: "file",
+                      resources: [
+                        {
+                          title: "NLFSR - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Nonlinear-feedback_shift_register",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "BM算法 - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Berlekamp%E2%80%93Massey_algorithm",
+                          description: "破解LFSR的算法————Berlekamp-Massey算法",
+                        },
+                        {
+                          title: "BM算法 - 洛谷",
+                          url: "https://www.luogu.com.cn/problem/P5487",
+                          description: "BM算法洛谷上的模板题",
+                        },
+                        {
+                          title: "非线性反馈移位寄存器NLFSR - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1gNrLB8EPn/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，六分钟",
+                        },
+                      ],
                     },
                     { id: "arx", name: "ARX (Add-Rotate-XOR)", type: "file" },
                   ],
