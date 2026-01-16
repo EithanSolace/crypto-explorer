@@ -69,8 +69,7 @@ export const fileSystemData = {
 │       │   └── ARX (Add-Rotate-XOR)
 │       ├── 硬件专用算法
 │       │   ├── A5/1 (已淘汰)
-│       │   ├── Trivium (现行标准)
-│       │   └── ZUC (现行标准)
+│       │   └── Trivium (现行标准)
 │       └── 软件专用算法
 │           ├── RC4 (已淘汰)
 │           └── ChaCha20 (现行标准)
@@ -736,7 +735,6 @@ export const fileSystemData = {
                   children: [
                     { id: "a5-1", name: "A5/1 (已淘汰)", type: "file" },
                     { id: "trivium", name: "Trivium (现行标准)", type: "file" },
-                    { id: "zuc", name: "ZUC (现行标准)", type: "file" },
                   ],
                 },
                 {
