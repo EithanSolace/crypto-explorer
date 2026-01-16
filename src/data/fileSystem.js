@@ -697,8 +697,40 @@ export const fileSystemData = {
                   name: "工作模式",
                   type: "folder",
                   children: [
-                    { id: "ecb", name: "ECB (已淘汰)", type: "file" },
-                    { id: "cbc", name: "CBC (不推荐)", type: "file" },
+                    {
+                      id: "ecb",
+                      name: "ECB (已淘汰)",
+                      type: "file",
+                      resources: [
+                        {
+                          title: "ECB - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#ECB",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "ECB模式 - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1ZeqwBtEG7/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，四分钟",
+                        },
+                      ],
+                    },
+                    {
+                      id: "cbc",
+                      name: "CBC (不推荐)",
+                      type: "file",
+                      resources: [
+                        {
+                          title: "CBC - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "CBC模式 - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1xhimBPEeg/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，七分半",
+                        },
+                      ],
+                    },
                     { id: "ctr", name: "CTR (GCM基础)", type: "file" },
                     { id: "gcm", name: "GCM (现行标准)", type: "file" },
                   ],
