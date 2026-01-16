@@ -799,7 +799,23 @@ export const fileSystemData = {
                   name: "硬件专用算法",
                   type: "folder",
                   children: [
-                    { id: "a5-1", name: "A5/1 (已淘汰)", type: "file" },
+                    {
+                      id: "a5-1",
+                      name: "A5/1 (已淘汰)",
+                      type: "file",
+                      resources: [
+                        {
+                          title: "A5/1 - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/A5/1",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "A5/1 - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1eJkFBZEnb/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，十分钟",
+                        },
+                      ],
+                    },
                     { id: "trivium", name: "Trivium (现行标准)", type: "file" },
                   ],
                 },
