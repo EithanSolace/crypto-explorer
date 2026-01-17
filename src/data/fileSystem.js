@@ -816,7 +816,23 @@ export const fileSystemData = {
                         },
                       ],
                     },
-                    { id: "trivium", name: "Trivium (现行标准)", type: "file" },
+                    {
+                      id: "trivium",
+                      name: "Trivium (现行标准)",
+                      type: "file",
+                      resources: [
+                        {
+                          title: "Trivium - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Trivium_(cipher)",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "Trivium - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1UDrSBdEJo/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，九分钟不到",
+                        },
+                      ],
+                    },
                   ],
                 },
                 {
