@@ -72,7 +72,7 @@ export const fileSystemData = {
 │       │   └── Trivium (现行标准)
 │       └── 软件专用算法
 │           ├── RC4 (已淘汰)
-│           └── ChaCha20 (现行标准)
+│           └── Salsa20 & ChaCha20 (现行标准)
 │
 ├── 密码学哈希和消息认证码 (Cryptographic Hash & MAC)
 │   ├── 密码学哈希 (Cryptographic Hash)
@@ -731,7 +731,23 @@ export const fileSystemData = {
                         },
                       ],
                     },
-                    { id: "ctr", name: "CTR (GCM基础)", type: "file" },
+                    {
+                      id: "ctr",
+                      name: "CTR (GCM基础)",
+                      type: "file",
+                      resources: [
+                        {
+                          title: "CTR - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CTR",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "CTR模式 - Bilibili",
+                          url: "https://www.bilibili.com/video/BV15rfSByEQT/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，六分钟出头",
+                        },
+                      ],
+                    },
                     { id: "gcm", name: "GCM (现行标准)", type: "file" },
                   ],
                 },
@@ -840,11 +856,39 @@ export const fileSystemData = {
                   name: "软件专用算法",
                   type: "folder",
                   children: [
-                    { id: "rc4", name: "RC4 (已淘汰)", type: "file" },
                     {
-                      id: "chacha20",
-                      name: "ChaCha20 (现行标准)",
+                      id: "rc4",
+                      name: "RC4 (已淘汰)",
                       type: "file",
+                      resources: [
+                        {
+                          title: "RC4 - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/RC4",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "RC4 - Bilibili",
+                          url: "https://www.bilibili.com/video/BV14h66BREKT/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，九分钟不到",
+                        },
+                      ],
+                    },
+                    {
+                      id: "salsa20&chacha20",
+                      name: "Salsa20 & ChaCha20 (现行标准)",
+                      type: "file",
+                      resources: [
+                        {
+                          title: "Salsa20 & ChaCha20 - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Salsa20",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "Salsa20 & ChaCha20 - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1ez6nBmEXx/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，十一分钟出头",
+                        },
+                      ],
                     },
                   ],
                 },
