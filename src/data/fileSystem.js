@@ -60,7 +60,7 @@ export const fileSystemData = {
 │   │   └── 工作模式
 │   │       ├── ECB (已淘汰)
 │   │       ├── CBC (不推荐)
-│   │       ├── CTR (GCM基础)
+│   │       ├── CTR (GCM的组成部件)
 │   │       └── GCM (现行标准)
 │   └── 流密码 (Stream Ciphers)
 │       ├── 核心结构
@@ -74,26 +74,32 @@ export const fileSystemData = {
 │           ├── RC4 (已淘汰)
 │           └── Salsa20 & ChaCha20 (现行标准)
 │
-├── 密码学哈希和消息认证码 (Cryptographic Hash & MAC)
+├── 密码学哈希 & 消息认证码 & 密钥派生函数 (Cryptographic Hash & MAC & KDF)
 │   ├── 密码学哈希 (Cryptographic Hash)
 │   │   ├── 核心结构
-│   │   │   ├── Merkle-Damgård 结构
-│   │   │   └── Sponge function (海绵结构)
+│   │   │   ├── MD结构 (Merkle-Damgård construction)
+│   │   │   └── 海绵结构 (Sponge function)
 │   │   └── 现代标准算法
 │   │       ├── MD5 (已淘汰)
 │   │       ├── SHA-1 (已淘汰)
 │   │       ├── SHA-2 (现行标准)
 │   │       ├── SHA-3 (下一代标准)
+│   │       ├── BLAKE2 (现行标准)
+│   │       ├── BLAKE3 (现行标准)
 │   │       └── SM3 (中国国密标准)
 │   ├── 消息认证码 (MAC)
-│   │   ├── HMAC
-│   │   ├── CMAC
-│   │   └── GMAC(硬件) & Poly1305(软件)
-│   ├── 密钥派生函数 (KDF)
-│   │   └── HKDF
-│   └── 口令哈希 (Password Hashing)
-│       ├── PBKDF2
-│       └── Argon2
+│   │   ├── 通用型工具
+│   │   │   ├── HMAC (Hash-based)
+│   │   │   └── CMAC (Cipher-based)
+│   │   └── AEAD专用组件
+│   │       ├── GMAC (GCM的组成部件)
+│   │       └── Poly1305
+│   └── 密钥派生函数 (KDF)
+│       ├── 基于口令 (Password-Based)
+│       │   ├── PBKDF2
+│       │   └── Argon2
+│       └── 基于密钥 (Key-Based)
+│           └── HKDF
 │
 ├── 非对称密码 (Asymmetric)
 │   ├── 经典公钥密码
@@ -733,7 +739,7 @@ export const fileSystemData = {
                     },
                     {
                       id: "ctr",
-                      name: "CTR (GCM基础)",
+                      name: "CTR (GCM的组成部件)",
                       type: "file",
                       resources: [
                         {
@@ -898,7 +904,7 @@ export const fileSystemData = {
         },
         {
           id: "integrity-auth-kdf",
-          name: "密码学哈希和消息认证码 (Cryptographic Hash & MAC)",
+          name: "密码学哈希 & 消息认证码 & 密钥派生函数 (Cryptographic Hash & MAC & KDF)",
           type: "folder",
           children: [
             {
@@ -913,12 +919,12 @@ export const fileSystemData = {
                   children: [
                     {
                       id: "merkle-damgard",
-                      name: "Merkle-Damgård 结构",
+                      name: "MD结构 (Merkle-Damgård construction)",
                       type: "file",
                     },
                     {
                       id: "sponge-structure",
-                      name: "Sponge function (海绵结构)",
+                      name: "海绵结构 (Sponge function)",
                       type: "file",
                     },
                   ],
@@ -932,6 +938,8 @@ export const fileSystemData = {
                     { id: "sha1", name: "SHA-1 (已淘汰)", type: "file" },
                     { id: "sha2", name: "SHA-2 (现行标准)", type: "file" },
                     { id: "sha3", name: "SHA-3 (下一代标准)", type: "file" },
+                    { id: "blake2", name: "BLAKE2 (现行标准)", type: "file" },
+                    { id: "blake3", name: "BLAKE3 (现行标准)", type: "file" },
                     { id: "sm3", name: "SM3 (中国国密标准)", type: "file" },
                   ],
                 },
@@ -942,12 +950,23 @@ export const fileSystemData = {
               name: "消息认证码 (MAC)",
               type: "folder",
               children: [
-                { id: "hmac", name: "HMAC", type: "file" },
-                { id: "cmac", name: "CMAC", type: "file" },
                 {
-                  id: "poly-gmac",
-                  name: "GMAC(硬件) & Poly1305(软件)",
-                  type: "file",
+                  id: "generic-tools",
+                  name: "通用型工具",
+                  type: "folder",
+                  children: [
+                    { id: "hmac", name: "HMAC (Hash-based)", type: "file" },
+                    { id: "cmac", name: "CMAC (Cipher-based)", type: "file" },
+                  ],
+                },
+                {
+                  id: "aead-components",
+                  name: "AEAD专用组件",
+                  type: "folder",
+                  children: [
+                    { id: "gmac", name: "GMAC (GCM的组成部件)", type: "file" },
+                    { id: "poly1305", name: "Poly1305", type: "file" },
+                  ],
                 },
               ],
             },
@@ -955,15 +974,22 @@ export const fileSystemData = {
               id: "kdf",
               name: "密钥派生函数 (KDF)",
               type: "folder",
-              children: [{ id: "hkdf", name: "HKDF", type: "file" }],
-            },
-            {
-              id: "password-hashing",
-              name: "口令哈希 (Password Hashing)",
-              type: "folder",
               children: [
-                { id: "pbkdf2", name: "PBKDF2", type: "file" },
-                { id: "argon2", name: "Argon2", type: "file" },
+                {
+                  id: "password-based-kdf",
+                  name: "基于口令 (Password-Based)",
+                  type: "folder",
+                  children: [
+                    { id: "pbkdf2", name: "PBKDF2", type: "file" },
+                    { id: "argon2", name: "Argon2", type: "file" },
+                  ],
+                },
+                {
+                  id: "key-based-kdf",
+                  name: "基于密钥 (Key-Based)",
+                  type: "folder",
+                  children: [{ id: "hkdf", name: "HKDF", type: "file" }],
+                },
               ],
             },
           ],
