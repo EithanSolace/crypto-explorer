@@ -84,7 +84,7 @@ export const fileSystemData = {
 │   │       ├── SHA-1 (已淘汰)
 │   │       ├── SHA-2 (现行标准)
 │   │       ├── SHA-3 (下一代标准)
-│   │       ├── BLAKE2 (现行标准)
+│   │       ├── BLAKE2b (现行标准)
 │   │       ├── BLAKE3 (现行标准)
 │   │       └── SM3 (中国国密标准)
 │   ├── 消息认证码 (MAC)
@@ -921,11 +921,45 @@ export const fileSystemData = {
                       id: "merkle-damgard",
                       name: "MD结构 (Merkle-Damgård construction)",
                       type: "file",
+                      resources: [
+                        {
+                          title: "Merkle–Damgård construction - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Merkle%E2%80%93Damg%C3%A5rd_construction",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "MD结构(前篇) - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1QcPczLExi/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，十三分钟不到",
+                        },
+                        {
+                          title: "MD结构(后篇) - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1ELNGzbE5v/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，十一分钟不到",
+                        },
+                      ],
                     },
                     {
                       id: "sponge-structure",
                       name: "海绵结构 (Sponge function)",
                       type: "file",
+                      resources: [
+                        {
+                          title: "Sponge function - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Sponge_function",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "海绵结构 - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1zL9MBXEGw/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，十五分钟不到",
+                        },
+                        {
+                          title: "Keccak Team",
+                          url: "https://keccak.team/index.html",
+                          description: "官方网站",
+                        },
+                      ],
                     },
                   ],
                 },
@@ -934,13 +968,125 @@ export const fileSystemData = {
                   name: "现代标准算法",
                   type: "folder",
                   children: [
-                    { id: "md5", name: "MD5 (已淘汰)", type: "file" },
-                    { id: "sha1", name: "SHA-1 (已淘汰)", type: "file" },
-                    { id: "sha2", name: "SHA-2 (现行标准)", type: "file" },
-                    { id: "sha3", name: "SHA-3 (下一代标准)", type: "file" },
-                    { id: "blake2", name: "BLAKE2 (现行标准)", type: "file" },
+                    {
+                      id: "md5",
+                      name: "MD5 (已淘汰)",
+                      type: "file",
+                      resources: [
+                        {
+                          title: "MD5 - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/MD5",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "MD5 - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1R4wtzxEe9/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，十二分半",
+                        },
+                      ],
+                    },
+                    {
+                      id: "sha1",
+                      name: "SHA-1 (已淘汰)",
+                      type: "file",
+                      resources: [
+                        {
+                          title: "SHA-1 - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/SHA-1",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "SHA-1 - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1bfAGzGEBx/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，十二分半",
+                        },
+                      ],
+                    },
+                    {
+                      id: "sha2",
+                      name: "SHA-2 (现行标准)",
+                      type: "file",
+                      resources: [
+                        {
+                          title: "SHA-2 - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/SHA-2",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "SHA-2 - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1uTQmByEZx/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，十三分半",
+                        },
+                      ],
+                    },
+                    {
+                      id: "sha3",
+                      name: "SHA-3 (下一代标准)",
+                      type: "file",
+                      resources: [
+                        {
+                          title: "SHA-3 - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/SHA-3",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "SHA-3 - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1tz9kBNE2K/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，九分钟出头",
+                        },
+                        {
+                          title: "Keccak Team",
+                          url: "https://keccak.team/index.html",
+                          description: "官方网站",
+                        },
+                      ],
+                    },
+                    {
+                      id: "BLAKE2b",
+                      name: "BLAKE2b (现行标准)",
+                      type: "file",
+                      resources: [
+                        {
+                          title: "BLAKE (hash function) - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/BLAKE_(hash_function)",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "BLAKE2b - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1BMdNBmEsx?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，六分半",
+                        },
+                        {
+                          title:
+                            " The BLAKE2 Cryptographic Hash and Message Authentication Code (MAC)",
+                          url: "https://datatracker.ietf.org/doc/html/rfc7693",
+                          description: "官方文档",
+                        },
+                      ],
+                    },
                     { id: "blake3", name: "BLAKE3 (现行标准)", type: "file" },
-                    { id: "sm3", name: "SM3 (中国国密标准)", type: "file" },
+                    {
+                      id: "sm3",
+                      name: "SM3 (中国国密标准)",
+                      type: "file",
+                      resources: [
+                        {
+                          title: "SM3 (hash function) - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/SM3_(hash_function)",
+                          description: "经典Wikipedia起手，没啥好说的",
+                        },
+                        {
+                          title: "国密SM3 - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1dnLb6LEAi/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "中文视频讲解，六分半",
+                        },
+                        {
+                          title: "SM3密码杂凑算法 - 国家密码管理局",
+                          url: "https://oscca.gov.cn/sca/xxgk/2010-12/17/1002389/files/302a3ada057c4a73830536d03e683110.pdf",
+                          description: "官方文档",
+                        },
+                      ],
+                    },
                   ],
                 },
               ],
