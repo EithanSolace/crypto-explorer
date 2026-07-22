@@ -92,8 +92,8 @@ export const fileSystemData = {
 │   │   │   ├── HMAC (Hash-based)
 │   │   │   └── CMAC (Cipher-based)
 │   │   └── AEAD专用组件
-│   │       ├── GMAC (GCM的组成部件)
-│   │       └── Poly1305
+│   │       ├── Poly1305
+│   │       └── GMAC (GCM的组成部件)
 │   └── 密钥派生函数 (KDF)
 │       ├── 基于口令 (Password-Based)
 │       │   ├── PBKDF2
@@ -1110,8 +1110,8 @@ export const fileSystemData = {
                   name: "AEAD专用组件",
                   type: "folder",
                   children: [
-                    { id: "gmac", name: "GMAC (GCM的组成部件)", type: "file" },
                     { id: "poly1305", name: "Poly1305", type: "file" },
+                    { id: "gmac", name: "GMAC (GCM的组成部件)", type: "file" },
                   ],
                 },
               ],
