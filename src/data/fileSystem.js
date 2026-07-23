@@ -15,93 +15,92 @@ export const fileSystemData = {
           content: `
 \`\`\`text
 密码学补完计划
-├── 理论基础 (Foundations)
-│   ├── 计算困难性假设 (Computational Hardness)
-│   │   ├── 复杂度类 (Complexity Classes)
+├── 理论基础
+│   ├── 计算困难性假设
+│   │   ├── 复杂度类
 │   │   │   ├── P vs NP 问题 (经典计算基石)
 │   │   │   └── BQP (有限误差量子多项式时间)
 │   │   ├── 单向函数 (One-Way Function, OWF)
 │   │   └── 陷门函数 (Trapdoor Function, TDF)
-│   ├── 安全性定义 (Security Definitions)
+│   ├── 安全性定义
 │   │   ├── 信息论安全 (Information-Theoretic Security)
-│   │   │   └── 完美保密性 (Perfect Secrecy / OTP)
-│   │   ├── 计算安全性 (Computational Security)
+│   │   │   └── 完美保密性 (Perfect Secrecy)
+│   │   ├── 计算安全 (Computational Security)
 │   │   │   ├── 语义安全 (Semantic Security)
 │   │   │   └── 不可区分性 (Indistinguishability)
-│   │   │       ├── IND-CPA (选择明文攻击不可区分)
-│   │   │       ├── IND-CCA1 (非自适应选择密文攻击不可区分)
-│   │   │       └── IND-CCA2 (自适应选择密文攻击不可区分)
-│   │   └── 神谕机模型 (Oracle Models)
+│   │   │       ├── 选择明文攻击不可区分 (Indistinguishability under Chosen Plaintext Attack, IND-CPA)
+│   │   │       ├── 非自适应选择密文攻击不可区分 (Indistinguishability under Non-adaptive Chosen Ciphertext Attack, IND-CCA1)
+│   │   │       └── 自适应选择密文攻击不可区分 (Indistinguishability under Adaptive Chosen Ciphertext Attack, IND-CCA2)
+│   │   └── 神谕机模型
 │   │       ├── 标准模型 (Standard Model)
 │   │       ├── 随机神谕机模型 (Random Oracle Model, ROM)
 │   │       └── 量子随机神谕机模型 (Quantum Random Oracle Model, QROM)
-│   ├── 随机性 (Randomness)
+│   ├── 随机性定义
 │   │   ├── 真随机
 │   │   │   └── 熵源 (Entropy Source)
 │   │   └── 伪随机
-│   │       ├── 伪随机生成器 (PRG)
-│   │       │   └──密码学安全伪随机数生成器 (CSPRNG)
-│   │       └── 伪随机函数 (PRF)
-│   └── 形式化验证 (Formal Verification)
-│       └── 计算机辅助安全协议验证工具 (Computer-Aided Security Protocol Verifiers)
-│           ├── ProVerif (快、全自动、适合快速验证)
-│           ├── Tamarin Prover (精准、可视化好、适合复杂协议)
-│           └── EasyCrypt (理论最强、难度极高、适合证明密码学原理)
+│   │       ├── 伪随机生成器 (Pseudorandom Generator, PRG)
+│   │       │   └──密码学安全伪随机数生成器 (Cryptographically Secure Pseudorandom Number Generator, CSPRNG)
+│   │       └── 伪随机函数 (Pseudorandom Function, PRF)
+│   └── 形式化验证
+│       ├── ProVerif
+│       ├── Tamarin Prover
+│       └── EasyCrypt
 │
-├── 对称密码 (Symmetric)
+├── 对称密码
 │   ├── 分组密码 (Block Ciphers)
 │   │   ├── 核心结构
 │   │   │   ├── Feistel网络
 │   │   │   └── SP网络 (Substitution-Permutation Network)
-│   │   ├── 现代标准算法
+│   │   ├── 算法
 │   │   │   ├── DES (已淘汰)
 │   │   │   ├── AES (现行标准)
 │   │   │   └── SM4 (中国国密标准)
 │   │   └── 工作模式
-│   │       ├── ECB (已淘汰)
-│   │       ├── CBC (不推荐)
-│   │       ├── CTR (GCM的组成部件)
-│   │       └── GCM (现行标准)
+│   │       ├── ECB模式 (已淘汰)
+│   │       ├── CBC模式 (不推荐)
+│   │       └── CTR模式 (GMAC的组成部件)
 │   └── 流密码 (Stream Ciphers)
 │       ├── 核心结构
-│       │   ├── 线性反馈移位寄存器 (LFSR)
-│       │   ├── 非线性反馈移位寄存器 (NLFSR)
-│       │   └── ARX (Add-Rotate-XOR)
-│       ├── 硬件专用算法
-│       │   ├── A5/1 (已淘汰)
-│       │   └── Trivium (现行标准)
-│       └── 软件专用算法
-│           ├── RC4 (已淘汰)
-│           └── Salsa20 & ChaCha20 (现行标准)
+│       │   ├── 线性反馈移位寄存器 (Linear Feedback Shift Register, LFSR)
+│       │   ├── 非线性反馈移位寄存器 (Non-Linear Feedback Shift Register, NLFSR)
+│       │   └── ARX结构 (Add-Rotate-XOR)
+│       └── 算法
+│           ├── 硬件专用算法
+│           │   ├── A5/1 (已淘汰)
+│           │   └── Trivium (现行标准)
+│           └── 软件专用算法
+│               ├── RC4 (已淘汰)
+│               └── Salsa20 & ChaCha20 (现行标准)
 │
-├── 密码学哈希 & 消息认证码 & 密钥派生函数 (Cryptographic Hash & MAC & KDF)
-│   ├── 密码学哈希 (Cryptographic Hash)
-│   │   ├── 核心结构
-│   │   │   ├── MD结构 (Merkle-Damgård construction)
-│   │   │   └── 海绵结构 (Sponge function)
-│   │   └── 现代标准算法
-│   │       ├── MD5 (已淘汰)
-│   │       ├── SHA-1 (已淘汰)
-│   │       ├── SHA-2 (现行标准)
-│   │       ├── SHA-3 (下一代标准)
-│   │       ├── BLAKE2b (现行标准)
-│   │       ├── BLAKE3 (现行标准)
-│   │       └── SM3 (中国国密标准)
-│   ├── 消息认证码 (MAC)
-│   │   ├── 通用型工具
-│   │   │   ├── HMAC (Hash-based)
-│   │   │   └── CMAC (Cipher-based)
-│   │   └── AEAD专用组件
-│   │       ├── Poly1305
-│   │       └── GMAC (GCM的组成部件)
-│   └── 密钥派生函数 (KDF)
-│       ├── 基于口令 (Password-Based)
-│       │   ├── PBKDF2
-│       │   └── Argon2
-│       └── 基于密钥 (Key-Based)
-│           └── HKDF
+├── 密码学哈希
+│   ├── 核心结构
+│   │   ├── MD结构 (Merkle-Damgård construction)
+│   │   └── 海绵结构 (Sponge function)
+│   └── 算法
+│       ├── MD5 (已淘汰)
+│       ├── SHA-1 (已淘汰)
+│       ├── SHA-2 (现行标准)
+│       ├── SHA-3 (下一代标准)
+│       ├── BLAKE2b (现行标准)
+│       └── SM3 (中国国密标准)
 │
-├── 非对称密码 (Asymmetric)
+├── 消息认证码 (Message Authentication Code, MAC)
+│   ├── 通用组件
+│   │   ├── HMAC (Hash-based MAC)
+│   │   └── CMAC (Cipher-based MAC)
+│   └── AEAD (Authenticated Encryption with Associated Data) 专用组件
+│       ├── Poly1305 (ChaCha20-Poly1305的组成部件)
+│       └── GMAC (AES-GCM的组成部件)
+│
+├── 密钥派生函数 (Key Derivation Function, KDF)
+│   ├── 基于口令 (Password-Based)
+│   │   ├── PBKDF2
+│   │   └── Argon2
+│   └── 基于密钥 (Key-Based)
+│       └── HKDF
+│
+├── 非对称密码
 │   ├── 经典公钥密码
 │   │   ├── 基于大数分解问题 (IFP-based)
 │   │   │   ├── RSA
