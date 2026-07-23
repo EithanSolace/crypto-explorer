@@ -176,17 +176,17 @@ export const fileSystemData = {
         },
         {
           id: "foundations",
-          name: "理论基础 (Foundations)",
+          name: "理论基础",
           type: "folder",
           children: [
             {
               id: "computational-hardness",
-              name: "计算困难性假设 (Computational Hardness)",
+              name: "计算困难性假设",
               type: "folder",
               children: [
                 {
                   id: "complexity-classes",
-                  name: "复杂度类 (Complexity Classes)",
+                  name: "复杂度类",
                   type: "folder",
                   children: [
                     {
@@ -268,7 +268,7 @@ export const fileSystemData = {
             },
             {
               id: "security-definitions",
-              name: "安全性定义 (Security Definitions)",
+              name: "安全性定义",
               type: "folder",
               children: [
                 {
@@ -278,7 +278,7 @@ export const fileSystemData = {
                   children: [
                     {
                       id: "perfect-secrecy",
-                      name: "完美保密性 (Perfect Secrecy / OTP)",
+                      name: "完美保密性 (Perfect Secrecy)",
                       type: "file",
                       resources: [
                         {
@@ -302,7 +302,7 @@ export const fileSystemData = {
                 },
                 {
                   id: "computational-security",
-                  name: "计算安全性 (Computational Security)",
+                  name: "计算安全 (Computational Security)",
                   type: "folder",
                   children: [
                     {
@@ -334,7 +334,7 @@ export const fileSystemData = {
                       children: [
                         {
                           id: "ind-cpa",
-                          name: "IND-CPA (选择明文攻击不可区分)",
+                          name: "选择明文攻击不可区分 (Indistinguishability under Chosen Plaintext Attack, IND-CPA)",
                           type: "file",
                           resources: [
                             {
@@ -351,7 +351,7 @@ export const fileSystemData = {
                         },
                         {
                           id: "ind-cca1",
-                          name: "IND-CCA1 (非自适应选择密文攻击不可区分)",
+                          name: "非自适应选择密文攻击不可区分 (Indistinguishability under Non-adaptive Chosen Ciphertext Attack, IND-CCA1)",
                           type: "file",
                           resources: [
                             {
@@ -368,7 +368,7 @@ export const fileSystemData = {
                         },
                         {
                           id: "ind-cca2",
-                          name: "IND-CCA2 (自适应选择密文攻击不可区分)",
+                          name: "自适应选择密文攻击不可区分 (Indistinguishability under Adaptive Chosen Ciphertext Attack, IND-CCA2)",
                           type: "file",
                           resources: [
                             {
@@ -389,7 +389,7 @@ export const fileSystemData = {
                 },
                 {
                   id: "oracle-models",
-                  name: "神谕机模型 (Oracle Models)",
+                  name: "神谕机模型",
                   type: "folder",
                   children: [
                     {
@@ -435,7 +435,7 @@ export const fileSystemData = {
             },
             {
               id: "randomness",
-              name: "随机性 (Randomness)",
+              name: "随机性定义",
               type: "folder",
               children: [
                 {
@@ -464,12 +464,12 @@ export const fileSystemData = {
                   children: [
                     {
                       id: "prg",
-                      name: "伪随机生成器 (PRG)",
+                      name: "伪随机生成器 (Pseudorandom Generator, PRG)",
                       type: "folder",
                       children: [
                         {
                           id: "csprng",
-                          name: "密码学安全伪随机数生成器 (CSPRNG)",
+                          name: "密码学安全伪随机数生成器 (Cryptographically Secure Pseudorandom Number Generator, CSPRNG)",
                           type: "file",
                           resources: [
                             {
@@ -507,7 +507,7 @@ export const fileSystemData = {
                     },
                     {
                       id: "prf",
-                      name: "伪随机函数 (PRF)",
+                      name: "伪随机函数 (Pseudorandom Function, PRF)",
                       type: "file",
                       resources: [
                         {
@@ -532,13 +532,8 @@ export const fileSystemData = {
               type: "folder",
               children: [
                 {
-                  id: "computer-aided-security-protocol-verifiers",
-                  name: "计算机辅助安全协议验证工具 (Computer-Aided Security Protocol Verifiers)",
-                  type: "folder",
-                  children: [
-                    {
-                      id: "proverif",
-                      name: "ProVerif (快、全自动、适合快速验证)",
+                  id: "proverif",
+                      name: "ProVerif",
                       type: "file",
                       resources: [
                         {
@@ -550,7 +545,7 @@ export const fileSystemData = {
                     },
                     {
                       id: "tamarin-prover",
-                      name: "Tamarin Prover (精准、可视化好、适合复杂协议)",
+                      name: "Tamarin Prover",
                       type: "file",
                       resources: [
                         {
@@ -562,7 +557,7 @@ export const fileSystemData = {
                     },
                     {
                       id: "easycrypt",
-                      name: "EasyCrypt (理论最强、难度极高、适合证明密码学原理)",
+                      name: "EasyCrypt",
                       type: "file",
                       resources: [
                         {
@@ -574,13 +569,11 @@ export const fileSystemData = {
                     },
                   ],
                 },
-              ],
-            },
           ],
         },
         {
           id: "symmetric-primitives",
-          name: "对称密码 (Symmetric)",
+          name: "对称密码",
           type: "folder",
           children: [
             {
@@ -631,7 +624,7 @@ export const fileSystemData = {
                 },
                 {
                   id: "modern-standard-algorithms",
-                  name: "现代标准算法",
+                  name: "算法",
                   type: "folder",
                   children: [
                     {
@@ -704,7 +697,7 @@ export const fileSystemData = {
                   children: [
                     {
                       id: "ecb",
-                      name: "ECB (已淘汰)",
+                      name: "ECB模式 (已淘汰)",
                       type: "file",
                       resources: [
                         {
@@ -721,7 +714,7 @@ export const fileSystemData = {
                     },
                     {
                       id: "cbc",
-                      name: "CBC (不推荐)",
+                      name: "CBC模式 (不推荐)",
                       type: "file",
                       resources: [
                         {
@@ -738,7 +731,7 @@ export const fileSystemData = {
                     },
                     {
                       id: "ctr",
-                      name: "CTR (GCM的组成部件)",
+                      name: "CTR模式 (GMAC的组成部件)",
                       type: "file",
                       resources: [
                         {
@@ -753,7 +746,6 @@ export const fileSystemData = {
                         },
                       ],
                     },
-                    { id: "gcm", name: "GCM (现行标准)", type: "file" },
                   ],
                 },
               ],
@@ -812,11 +804,16 @@ export const fileSystemData = {
                         },
                       ],
                     },
-                    { id: "arx", name: "ARX (Add-Rotate-XOR)", type: "file" },
+                    { id: "arx", name: "ARX结构 (Add-Rotate-XOR)", type: "file" },
                   ],
                 },
                 {
-                  id: "hardware-algorithms",
+                  id: "stream-algorithms",
+                  name: "算法",
+                  type: "folder",
+                  children: [
+                    {
+                      id: "hardware-algorithms",
                   name: "硬件专用算法",
                   type: "folder",
                   children: [
@@ -897,18 +894,15 @@ export const fileSystemData = {
                     },
                   ],
                 },
+                  ],
+                },
               ],
             },
           ],
         },
         {
-          id: "integrity-auth-kdf",
-          name: "密码学哈希 & 消息认证码 & 密钥派生函数 (Cryptographic Hash & MAC & KDF)",
-          type: "folder",
-          children: [
-            {
-              id: "cryptographic-hash",
-              name: "密码学哈希 (Cryptographic Hash)",
+          id: "cryptographic-hash",
+          name: "密码学哈希",
               type: "folder",
               children: [
                 {
@@ -964,7 +958,7 @@ export const fileSystemData = {
                 },
                 {
                   id: "modern-hash-algorithms",
-                  name: "现代标准算法",
+                  name: "算法",
                   type: "folder",
                   children: [
                     {
@@ -1063,7 +1057,6 @@ export const fileSystemData = {
                         },
                       ],
                     },
-                    { id: "blake3", name: "BLAKE3 (现行标准)", type: "file" },
                     {
                       id: "sm3",
                       name: "SM3 (中国国密标准)",
@@ -1092,32 +1085,32 @@ export const fileSystemData = {
             },
             {
               id: "message-authentication-codes",
-              name: "消息认证码 (MAC)",
+              name: "消息认证码 (Message Authentication Code, MAC)",
               type: "folder",
               children: [
                 {
                   id: "generic-tools",
-                  name: "通用型工具",
+                  name: "通用组件",
                   type: "folder",
                   children: [
-                    { id: "hmac", name: "HMAC (Hash-based)", type: "file" },
-                    { id: "cmac", name: "CMAC (Cipher-based)", type: "file" },
+                    { id: "hmac", name: "HMAC (Hash-based MAC)", type: "file" },
+                    { id: "cmac", name: "CMAC (Cipher-based MAC)", type: "file" },
                   ],
                 },
                 {
                   id: "aead-components",
-                  name: "AEAD专用组件",
+                  name: "AEAD (Authenticated Encryption with Associated Data) 专用组件",
                   type: "folder",
                   children: [
-                    { id: "poly1305", name: "Poly1305", type: "file" },
-                    { id: "gmac", name: "GMAC (GCM的组成部件)", type: "file" },
+                    { id: "poly1305", name: "Poly1305 (ChaCha20-Poly1305的组成部件)", type: "file" },
+                    { id: "gmac", name: "GMAC (AES-GCM的组成部件)", type: "file" },
                   ],
                 },
               ],
             },
             {
               id: "kdf",
-              name: "密钥派生函数 (KDF)",
+              name: "密钥派生函数 (Key Derivation Function, KDF)",
               type: "folder",
               children: [
                 {
@@ -1137,11 +1130,9 @@ export const fileSystemData = {
                 },
               ],
             },
-          ],
-        },
         {
           id: "asymmetric-primitives",
-          name: "非对称密码 (Asymmetric)",
+          name: "非对称密码",
           type: "folder",
           children: [
             {
