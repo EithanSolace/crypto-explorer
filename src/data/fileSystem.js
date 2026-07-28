@@ -28,9 +28,6 @@ export const fileSystemData = {
 │   │   ├── 计算安全 (Computational Security)
 │   │   │   ├── 语义安全 (Semantic Security)
 │   │   │   └── 不可区分性 (Indistinguishability)
-│   │   │       ├── 选择明文攻击不可区分 (Indistinguishability under Chosen Plaintext Attack, IND-CPA)
-│   │   │       ├── 非自适应选择密文攻击不可区分 (Indistinguishability under Non-adaptive Chosen Ciphertext Attack, IND-CCA1)
-│   │   │       └── 自适应选择密文攻击不可区分 (Indistinguishability under Adaptive Chosen Ciphertext Attack, IND-CCA2)
 │   │   └── 神谕机模型
 │   │       ├── 标准模型 (Standard Model)
 │   │       ├── 随机神谕机模型 (Random Oracle Model, ROM)
@@ -94,11 +91,11 @@ export const fileSystemData = {
 │       └── GMAC (AES-GCM的组成部件)
 │
 ├── 密钥派生函数 (Key Derivation Function, KDF)
-│   ├── 基于口令 (Password-Based)
-│   │   ├── PBKDF2
-│   │   └── Argon2
-│   └── 基于密钥 (Key-Based)
-│       └── HKDF
+│   ├── 基于密钥 (Key-Based)
+│   |    └── HKDF
+│   └── 基于口令 (Password-Based)
+│       ├── PBKDF2
+│       └── Argon2
 │
 ├── 非对称密码
 │   ├── 经典公钥密码
@@ -197,17 +194,17 @@ export const fileSystemData = {
                         {
                           title: "P versus NP problem - Wikipedia",
                           url: "https://en.wikipedia.org/wiki/P_versus_NP_problem",
-                          description: "非常全面",
+                          description: "Wikipedia",
                         },
                         {
                           title: "Cook-Levin Theorem - Wikipedia",
                           url: "https://en.wikipedia.org/wiki/Cook%E2%80%93Levin_theorem",
-                          description: "经典Wikipedia起手，没啥好说的",
+                          description: "Wikipedia",
                         },
                         {
                           title: "Cook-Levin Theorem - Bilibili",
                           url: "https://www.bilibili.com/video/BV1NzUDBzEmr/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，7分钟不到",
+                          description: "by Eithan Solace",
                         },
                       ],
                     },
@@ -219,12 +216,13 @@ export const fileSystemData = {
                         {
                           title: "Shor's algorithm - Wikipedia",
                           url: "https://en.wikipedia.org/wiki/Shor%27s_algorithm",
-                          description: "有些推导是省略了，但是框架搭得很好",
+                          description:
+                            "Wikipedia，有些推导是省略了，但是框架搭得很好",
                         },
                         {
                           title: "Shor's algorithm - Bilibili",
                           url: "https://www.bilibili.com/video/BV1NwS4B6Etw/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，全面的推导，42分钟",
+                          description: "by Eithan Solace",
                         },
                       ],
                     },
@@ -238,12 +236,12 @@ export const fileSystemData = {
                     {
                       title: "one-way function - Wikipedia",
                       url: "https://en.wikipedia.org/wiki/One-way_function",
-                      description: "经典Wikipedia起手，没啥好说的",
+                      description: "Wikipedia",
                     },
                     {
                       title: "one-way function - Bilibili",
                       url: "https://www.bilibili.com/video/BV1A82XBiEwF/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                      description: "中文视频讲解，前半部分是单向函数内容",
+                      description: "by Eithan Solace",
                     },
                   ],
                 },
@@ -255,12 +253,12 @@ export const fileSystemData = {
                     {
                       title: "trapdoor function - Wikipedia",
                       url: "https://en.wikipedia.org/wiki/Trapdoor_function",
-                      description: "经典Wikipedia起手，没啥好说的",
+                      description: "Wikipedia",
                     },
                     {
                       title: "trapdoor function - Bilibili",
                       url: "https://www.bilibili.com/video/BV1A82XBiEwF/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                      description: "中文视频讲解，后半部分是陷门函数内容",
+                      description: "by Eithan Solace",
                     },
                   ],
                 },
@@ -284,17 +282,17 @@ export const fileSystemData = {
                         {
                           title: "information-theoretic security - Wikipedia",
                           url: "https://en.wikipedia.org/wiki/Information-theoretic_security",
-                          description: "Wikipedia讲的信息论安全",
+                          description: "Wikipedia",
                         },
                         {
                           title: "one-time pad - Wikipedia",
                           url: "https://en.wikipedia.org/wiki/One-time_pad",
-                          description: "Wikipedia讲的一次一密one-time pad",
+                          description: "Wikipedia",
                         },
                         {
                           title: "Perfect Secrecy - Bilibili",
                           url: "https://www.bilibili.com/video/BV1JYmwBxEkq/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，五分钟",
+                          description: "by Eithan Solace",
                         },
                       ],
                     },
@@ -313,75 +311,34 @@ export const fileSystemData = {
                         {
                           title: "semantic security - Wikipedia",
                           url: "https://en.wikipedia.org/wiki/Semantic_security",
-                          description: "Wikipedia讲的语义安全",
+                          description: "Wikipedia",
                         },
                         {
                           title: "有关语义安全的那张业界著名的Linux企鹅图",
                           url: "https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation",
-                          description: "打开Wikipedia链接往下翻就能看到了",
+                          description: "Wikipedia",
                         },
                         {
                           title: "semantic security - Bilibili",
                           url: "https://www.bilibili.com/video/BV14x2CB7Emk/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，前半部分是语义安全",
+                          description: "by Eithan Solace",
                         },
                       ],
                     },
                     {
                       id: "indistinguishability",
                       name: "不可区分性 (Indistinguishability)",
-                      type: "folder",
-                      children: [
+                      type: "file",
+                      resources: [
                         {
-                          id: "ind-cpa",
-                          name: "选择明文攻击不可区分 (Indistinguishability under Chosen Plaintext Attack, IND-CPA)",
-                          type: "file",
-                          resources: [
-                            {
-                              title: "Wikipedia",
-                              url: "https://en.wikipedia.org/wiki/Ciphertext_indistinguishability",
-                              description: "经典Wikipedia起手，没啥好说的",
-                            },
-                            {
-                              title: "CPA - Bilibili",
-                              url: "https://www.bilibili.com/video/BV14x2CB7Emk/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                              description: "中文视频讲解，后半部分讲到CPA",
-                            },
-                          ],
+                          title: "Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Ciphertext_indistinguishability",
+                          description: "Wikipedia",
                         },
                         {
-                          id: "ind-cca1",
-                          name: "非自适应选择密文攻击不可区分 (Indistinguishability under Non-adaptive Chosen Ciphertext Attack, IND-CCA1)",
-                          type: "file",
-                          resources: [
-                            {
-                              title: "Wikipedia",
-                              url: "https://en.wikipedia.org/wiki/Ciphertext_indistinguishability",
-                              description: "经典Wikipedia起手，没啥好说的",
-                            },
-                            {
-                              title: "CCA1 - Bilibili",
-                              url: "https://www.bilibili.com/video/BV14x2CB7Emk/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                              description: "中文视频讲解，后半部分讲到CCA1",
-                            },
-                          ],
-                        },
-                        {
-                          id: "ind-cca2",
-                          name: "自适应选择密文攻击不可区分 (Indistinguishability under Adaptive Chosen Ciphertext Attack, IND-CCA2)",
-                          type: "file",
-                          resources: [
-                            {
-                              title: "Wikipedia",
-                              url: "https://en.wikipedia.org/wiki/Ciphertext_indistinguishability",
-                              description: "经典Wikipedia起手，没啥好说的",
-                            },
-                            {
-                              title: "CCA2 - Bilibili",
-                              url: "https://www.bilibili.com/video/BV14x2CB7Emk/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                              description: "中文视频讲解，后半部分讲到CCA2",
-                            },
-                          ],
+                          title: "CPA - Bilibili",
+                          url: "https://www.bilibili.com/video/BV14x2CB7Emk/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "by Eithan Solace",
                         },
                       ],
                     },
@@ -400,7 +357,7 @@ export const fileSystemData = {
                         {
                           title: "Standard Model - Wikipedia",
                           url: "https://en.wikipedia.org/wiki/Standard_model_(cryptography)",
-                          description: "看个定义就行",
+                          description: "Wikipedia",
                         },
                       ],
                     },
@@ -412,7 +369,7 @@ export const fileSystemData = {
                         {
                           title: "Random Oracle - Wikipedia",
                           url: "https://en.wikipedia.org/wiki/Random_oracle",
-                          description: "看个定义就行",
+                          description: "Wikipedia",
                         },
                       ],
                     },
@@ -451,7 +408,7 @@ export const fileSystemData = {
                         {
                           title: "熵源 - Bilibili",
                           url: "https://www.bilibili.com/video/BV1C3mtBvEB5/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，六分钟",
+                          description: "by Eithan Solace",
                         },
                       ],
                     },
@@ -475,24 +432,24 @@ export const fileSystemData = {
                             {
                               title: "Pseudorandom Generator - Wikipedia",
                               url: "https://en.wikipedia.org/wiki/Pseudorandom_generator",
-                              description: "经典Wikipedia起手，没啥好说的",
+                              description: "Wikipedia",
                             },
                             {
                               title: "伪随机生成器PRG - Bilibili",
                               url: "https://www.bilibili.com/video/BV1dimuBiEgp/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                              description: "中文视频讲解，五分半",
+                              description: "by Eithan Solace",
                             },
                             {
                               title:
                                 "Cryptographically secure pseudorandom number generator - Wikipedia",
                               url: "https://en.wikipedia.org/wiki/Cryptographically_secure_pseudorandom_number_generator",
-                              description: "经典Wikipedia起手，没啥好说的",
+                              description: "Wikipedia",
                             },
                             {
                               title:
                                 "密码学安全伪随机数生成器CSPRNG - Bilibili",
                               url: "https://www.bilibili.com/video/BV1gcmEBHEbQ/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                              description: "中文视频讲解，七分半",
+                              description: "by Eithan Solace",
                             },
                             {
                               title:
@@ -513,12 +470,12 @@ export const fileSystemData = {
                         {
                           title: "Pseudorandom Function Family - Wikipedia",
                           url: "https://en.wikipedia.org/wiki/Pseudorandom_function_family",
-                          description: "经典Wikipedia起手，没啥好说的",
+                          description: "Wikipedia",
                         },
                         {
                           title: "PRF - Bilibili",
                           url: "https://www.bilibili.com/video/BV11fmRB7EqP/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，九分半",
+                          description: "by Eithan Solace",
                         },
                       ],
                     },
@@ -533,42 +490,42 @@ export const fileSystemData = {
               children: [
                 {
                   id: "proverif",
-                      name: "ProVerif",
-                      type: "file",
-                      resources: [
-                        {
-                          title: "ProVerif",
-                          url: "https://bblanche.gitlabpages.inria.fr/proverif",
-                          description: "官网",
-                        },
-                      ],
-                    },
+                  name: "ProVerif",
+                  type: "file",
+                  resources: [
                     {
-                      id: "tamarin-prover",
-                      name: "Tamarin Prover",
-                      type: "file",
-                      resources: [
-                        {
-                          title: "Tamarin Prover",
-                          url: "https://tamarin-prover.com",
-                          description: "官网",
-                        },
-                      ],
-                    },
-                    {
-                      id: "easycrypt",
-                      name: "EasyCrypt",
-                      type: "file",
-                      resources: [
-                        {
-                          title: "EasyCrypt",
-                          url: "https://github.com/EasyCrypt/easycrypt",
-                          description: "Github项目网站",
-                        },
-                      ],
+                      title: "ProVerif",
+                      url: "https://bblanche.gitlabpages.inria.fr/proverif",
+                      description: "官网",
                     },
                   ],
                 },
+                {
+                  id: "tamarin-prover",
+                  name: "Tamarin Prover",
+                  type: "file",
+                  resources: [
+                    {
+                      title: "Tamarin Prover",
+                      url: "https://tamarin-prover.com",
+                      description: "官网",
+                    },
+                  ],
+                },
+                {
+                  id: "easycrypt",
+                  name: "EasyCrypt",
+                  type: "file",
+                  resources: [
+                    {
+                      title: "EasyCrypt",
+                      url: "https://github.com/EasyCrypt/easycrypt",
+                      description: "Github项目网站",
+                    },
+                  ],
+                },
+              ],
+            },
           ],
         },
         {
@@ -594,12 +551,12 @@ export const fileSystemData = {
                         {
                           title: "Feistel Cipher - Wikipedia",
                           url: "https://en.wikipedia.org/wiki/Feistel_cipher",
-                          description: "经典Wikipedia起手，没啥好说的",
+                          description: "Wikipedia",
                         },
                         {
                           title: "Feistel网络 - Bilibili",
                           url: "https://www.bilibili.com/video/BV1gDqVBjE6n/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，十二分钟",
+                          description: "by Eithan Solace",
                         },
                       ],
                     },
@@ -611,12 +568,12 @@ export const fileSystemData = {
                         {
                           title: "SP Network - Wikipedia",
                           url: "https://en.wikipedia.org/wiki/Substitution%E2%80%93permutation_network",
-                          description: "经典Wikipedia起手，没啥好说的",
+                          description: "Wikipedia",
                         },
                         {
                           title: "SP网络 - Bilibili",
                           url: "https://www.bilibili.com/video/BV1nfqrByE14/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，十七分钟",
+                          description: "by Eithan Solace",
                         },
                       ],
                     },
@@ -635,7 +592,7 @@ export const fileSystemData = {
                         {
                           title: "DES - Wikipedia",
                           url: "https://en.wikipedia.org/wiki/Data_Encryption_Standard",
-                          description: "经典Wikipedia起手，没啥好说的",
+                          description: "Wikipedia",
                         },
                         {
                           title: "DES - NIST",
@@ -645,7 +602,7 @@ export const fileSystemData = {
                         {
                           title: "DES - Bilibili",
                           url: "https://www.bilibili.com/video/BV1D7vtB7ERE/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，十四分钟",
+                          description: "by Eithan Solace",
                         },
                       ],
                     },
@@ -657,17 +614,17 @@ export const fileSystemData = {
                         {
                           title: "AES - Wikipedia",
                           url: "https://en.wikipedia.org/wiki/Advanced_Encryption_Standard",
-                          description: "经典Wikipedia起手，没啥好说的",
+                          description: "Wikipedia",
                         },
                         {
                           title: "AES(前篇) - Bilibili",
                           url: "https://www.bilibili.com/video/BV1HcvXBKE3B/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解(前篇)，十分半",
+                          description: "by Eithan Solace",
                         },
                         {
                           title: "AES(后篇) - Bilibili",
                           url: "https://www.bilibili.com/video/BV1xjizBrEJg/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解(后篇)，十分半",
+                          description: "by Eithan Solace",
                         },
                       ],
                     },
@@ -679,12 +636,12 @@ export const fileSystemData = {
                         {
                           title: "SM4 - Wikipedia",
                           url: "https://en.wikipedia.org/wiki/SM4_(cipher)",
-                          description: "经典Wikipedia起手，没啥好说的",
+                          description: "Wikipedia",
                         },
                         {
                           title: "国密SM4 - Bilibili",
                           url: "https://www.bilibili.com/video/BV1nPi4BwEaY/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，七分钟",
+                          description: "by Eithan Solace",
                         },
                       ],
                     },
@@ -703,12 +660,12 @@ export const fileSystemData = {
                         {
                           title: "ECB - Wikipedia",
                           url: "https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#ECB",
-                          description: "经典Wikipedia起手，没啥好说的",
+                          description: "Wikipedia",
                         },
                         {
                           title: "ECB模式 - Bilibili",
                           url: "https://www.bilibili.com/video/BV1ZeqwBtEG7/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，四分钟",
+                          description: "by Eithan Solace",
                         },
                       ],
                     },
@@ -720,12 +677,12 @@ export const fileSystemData = {
                         {
                           title: "CBC - Wikipedia",
                           url: "https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CBC",
-                          description: "经典Wikipedia起手，没啥好说的",
+                          description: "Wikipedia",
                         },
                         {
                           title: "CBC模式 - Bilibili",
                           url: "https://www.bilibili.com/video/BV1xhimBPEeg/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，七分半",
+                          description: "by Eithan Solace",
                         },
                       ],
                     },
@@ -737,12 +694,12 @@ export const fileSystemData = {
                         {
                           title: "CTR - Wikipedia",
                           url: "https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#CTR",
-                          description: "经典Wikipedia起手，没啥好说的",
+                          description: "Wikipedia",
                         },
                         {
                           title: "CTR模式 - Bilibili",
                           url: "https://www.bilibili.com/video/BV15rfSByEQT/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，六分钟出头",
+                          description: "by Eithan Solace",
                         },
                       ],
                     },
@@ -768,12 +725,12 @@ export const fileSystemData = {
                         {
                           title: "LFSR - Wikipedia",
                           url: "https://en.wikipedia.org/wiki/Linear-feedback_shift_register",
-                          description: "经典Wikipedia起手，没啥好说的",
+                          description: "Wikipedia",
                         },
                         {
                           title: "线性反馈移位寄存器LFSR - Bilibili",
                           url: "https://www.bilibili.com/video/BV1YjrGBxE59/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，十一分钟",
+                          description: "by Eithan Solace",
                         },
                       ],
                     },
@@ -785,12 +742,12 @@ export const fileSystemData = {
                         {
                           title: "NLFSR - Wikipedia",
                           url: "https://en.wikipedia.org/wiki/Nonlinear-feedback_shift_register",
-                          description: "经典Wikipedia起手，没啥好说的",
+                          description: "Wikipedia",
                         },
                         {
                           title: "BM算法 - Wikipedia",
                           url: "https://en.wikipedia.org/wiki/Berlekamp%E2%80%93Massey_algorithm",
-                          description: "破解LFSR的算法————Berlekamp-Massey算法",
+                          description: "Wikipedia",
                         },
                         {
                           title: "BM算法 - 洛谷",
@@ -800,11 +757,27 @@ export const fileSystemData = {
                         {
                           title: "非线性反馈移位寄存器NLFSR - Bilibili",
                           url: "https://www.bilibili.com/video/BV1gNrLB8EPn/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，六分钟",
+                          description: "by Eithan Solace",
                         },
                       ],
                     },
-                    { id: "arx", name: "ARX结构 (Add-Rotate-XOR)", type: "file" },
+                    {
+                      id: "arx",
+                      name: "ARX结构 (Add-Rotate-XOR)",
+                      type: "file",
+                      resources: [
+                        {
+                          title: "ARX_(add-rotate-XOR) - Wikipedia",
+                          url: "https://en.wikipedia.org/wiki/Block_cipher#ARX_(add%E2%80%93rotate%E2%80%93XOR)",
+                          description: "Wikipedia",
+                        },
+                        {
+                          title: "ARX结构 - Bilibili",
+                          url: "https://www.bilibili.com/video/BV1sLkgB3EBi/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                          description: "by Eithan Solace",
+                        },
+                      ],
+                    },
                   ],
                 },
                 {
@@ -814,86 +787,86 @@ export const fileSystemData = {
                   children: [
                     {
                       id: "hardware-algorithms",
-                  name: "硬件专用算法",
-                  type: "folder",
-                  children: [
-                    {
-                      id: "a5-1",
-                      name: "A5/1 (已淘汰)",
-                      type: "file",
-                      resources: [
+                      name: "硬件专用算法",
+                      type: "folder",
+                      children: [
                         {
-                          title: "A5/1 - Wikipedia",
-                          url: "https://en.wikipedia.org/wiki/A5/1",
-                          description: "经典Wikipedia起手，没啥好说的",
+                          id: "a5-1",
+                          name: "A5/1 (已淘汰)",
+                          type: "file",
+                          resources: [
+                            {
+                              title: "A5/1 - Wikipedia",
+                              url: "https://en.wikipedia.org/wiki/A5/1",
+                              description: "Wikipedia",
+                            },
+                            {
+                              title: "A5/1 - Bilibili",
+                              url: "https://www.bilibili.com/video/BV1eJkFBZEnb/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                              description: "by Eithan Solace",
+                            },
+                          ],
                         },
                         {
-                          title: "A5/1 - Bilibili",
-                          url: "https://www.bilibili.com/video/BV1eJkFBZEnb/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，十分钟",
-                        },
-                      ],
-                    },
-                    {
-                      id: "trivium",
-                      name: "Trivium (现行标准)",
-                      type: "file",
-                      resources: [
-                        {
-                          title: "Trivium - Wikipedia",
-                          url: "https://en.wikipedia.org/wiki/Trivium_(cipher)",
-                          description: "经典Wikipedia起手，没啥好说的",
-                        },
-                        {
-                          title: "Trivium - Bilibili",
-                          url: "https://www.bilibili.com/video/BV1UDrSBdEJo/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，九分钟不到",
-                        },
-                      ],
-                    },
-                  ],
-                },
-                {
-                  id: "software-algorithms",
-                  name: "软件专用算法",
-                  type: "folder",
-                  children: [
-                    {
-                      id: "rc4",
-                      name: "RC4 (已淘汰)",
-                      type: "file",
-                      resources: [
-                        {
-                          title: "RC4 - Wikipedia",
-                          url: "https://en.wikipedia.org/wiki/RC4",
-                          description: "经典Wikipedia起手，没啥好说的",
-                        },
-                        {
-                          title: "RC4 - Bilibili",
-                          url: "https://www.bilibili.com/video/BV14h66BREKT/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，九分钟不到",
+                          id: "trivium",
+                          name: "Trivium (现行标准)",
+                          type: "file",
+                          resources: [
+                            {
+                              title: "Trivium - Wikipedia",
+                              url: "https://en.wikipedia.org/wiki/Trivium_(cipher)",
+                              description: "Wikipedia",
+                            },
+                            {
+                              title: "Trivium - Bilibili",
+                              url: "https://www.bilibili.com/video/BV1UDrSBdEJo/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                              description: "by Eithan Solace",
+                            },
+                          ],
                         },
                       ],
                     },
                     {
-                      id: "salsa20&chacha20",
-                      name: "Salsa20 & ChaCha20 (现行标准)",
-                      type: "file",
-                      resources: [
+                      id: "software-algorithms",
+                      name: "软件专用算法",
+                      type: "folder",
+                      children: [
                         {
-                          title: "Salsa20 & ChaCha20 - Wikipedia",
-                          url: "https://en.wikipedia.org/wiki/Salsa20",
-                          description: "经典Wikipedia起手，没啥好说的",
+                          id: "rc4",
+                          name: "RC4 (已淘汰)",
+                          type: "file",
+                          resources: [
+                            {
+                              title: "RC4 - Wikipedia",
+                              url: "https://en.wikipedia.org/wiki/RC4",
+                              description: "Wikipedia",
+                            },
+                            {
+                              title: "RC4 - Bilibili",
+                              url: "https://www.bilibili.com/video/BV14h66BREKT/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                              description: "by Eithan Solace",
+                            },
+                          ],
                         },
                         {
-                          title: "Salsa20 & ChaCha20 - Bilibili",
-                          url: "https://www.bilibili.com/video/BV1ez6nBmEXx/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，十一分钟出头",
+                          id: "salsa20&chacha20",
+                          name: "Salsa20 & ChaCha20 (现行标准)",
+                          type: "file",
+                          resources: [
+                            {
+                              title: "Salsa20 & ChaCha20 - Wikipedia",
+                              url: "https://en.wikipedia.org/wiki/Salsa20",
+                              description: "Wikipedia",
+                            },
+                            {
+                              title: "Salsa20 & ChaCha20 - Bilibili",
+                              url: "https://www.bilibili.com/video/BV1ez6nBmEXx/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                              description: "by Eithan Solace",
+                            },
+                          ],
                         },
                       ],
                     },
-                  ],
-                },
                   ],
                 },
               ],
@@ -903,233 +876,307 @@ export const fileSystemData = {
         {
           id: "cryptographic-hash",
           name: "密码学哈希",
+          type: "folder",
+          children: [
+            {
+              id: "core-structures-hash",
+              name: "核心结构",
               type: "folder",
               children: [
                 {
-                  id: "core-structures-hash",
-                  name: "核心结构",
-                  type: "folder",
-                  children: [
+                  id: "merkle-damgard",
+                  name: "MD结构 (Merkle-Damgård construction)",
+                  type: "file",
+                  resources: [
                     {
-                      id: "merkle-damgard",
-                      name: "MD结构 (Merkle-Damgård construction)",
-                      type: "file",
-                      resources: [
-                        {
-                          title: "Merkle–Damgård construction - Wikipedia",
-                          url: "https://en.wikipedia.org/wiki/Merkle%E2%80%93Damg%C3%A5rd_construction",
-                          description: "经典Wikipedia起手，没啥好说的",
-                        },
-                        {
-                          title: "MD结构(前篇) - Bilibili",
-                          url: "https://www.bilibili.com/video/BV1QcPczLExi/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，十三分钟不到",
-                        },
-                        {
-                          title: "MD结构(后篇) - Bilibili",
-                          url: "https://www.bilibili.com/video/BV1ELNGzbE5v/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，十一分钟不到",
-                        },
-                      ],
+                      title: "Merkle–Damgård construction - Wikipedia",
+                      url: "https://en.wikipedia.org/wiki/Merkle%E2%80%93Damg%C3%A5rd_construction",
+                      description: "Wikipedia",
                     },
                     {
-                      id: "sponge-structure",
-                      name: "海绵结构 (Sponge function)",
-                      type: "file",
-                      resources: [
-                        {
-                          title: "Sponge function - Wikipedia",
-                          url: "https://en.wikipedia.org/wiki/Sponge_function",
-                          description: "经典Wikipedia起手，没啥好说的",
-                        },
-                        {
-                          title: "海绵结构 - Bilibili",
-                          url: "https://www.bilibili.com/video/BV1zL9MBXEGw/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，十五分钟不到",
-                        },
-                        {
-                          title: "Keccak Team",
-                          url: "https://keccak.team/index.html",
-                          description: "官方网站",
-                        },
-                      ],
+                      title: "MD结构(前篇) - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1QcPczLExi/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "by Eithan Solace",
+                    },
+                    {
+                      title: "MD结构(后篇) - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1ELNGzbE5v/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "by Eithan Solace",
                     },
                   ],
                 },
                 {
-                  id: "modern-hash-algorithms",
-                  name: "算法",
-                  type: "folder",
-                  children: [
+                  id: "sponge-structure",
+                  name: "海绵结构 (Sponge function)",
+                  type: "file",
+                  resources: [
                     {
-                      id: "md5",
-                      name: "MD5 (已淘汰)",
-                      type: "file",
-                      resources: [
-                        {
-                          title: "MD5 - Wikipedia",
-                          url: "https://en.wikipedia.org/wiki/MD5",
-                          description: "经典Wikipedia起手，没啥好说的",
-                        },
-                        {
-                          title: "MD5 - Bilibili",
-                          url: "https://www.bilibili.com/video/BV1R4wtzxEe9/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，十二分半",
-                        },
-                      ],
+                      title: "Sponge function - Wikipedia",
+                      url: "https://en.wikipedia.org/wiki/Sponge_function",
+                      description: "Wikipedia",
                     },
                     {
-                      id: "sha1",
-                      name: "SHA-1 (已淘汰)",
-                      type: "file",
-                      resources: [
-                        {
-                          title: "SHA-1 - Wikipedia",
-                          url: "https://en.wikipedia.org/wiki/SHA-1",
-                          description: "经典Wikipedia起手，没啥好说的",
-                        },
-                        {
-                          title: "SHA-1 - Bilibili",
-                          url: "https://www.bilibili.com/video/BV1bfAGzGEBx/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，十二分半",
-                        },
-                      ],
+                      title: "海绵结构 - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1zL9MBXEGw/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "by Eithan Solace",
                     },
                     {
-                      id: "sha2",
-                      name: "SHA-2 (现行标准)",
-                      type: "file",
-                      resources: [
-                        {
-                          title: "SHA-2 - Wikipedia",
-                          url: "https://en.wikipedia.org/wiki/SHA-2",
-                          description: "经典Wikipedia起手，没啥好说的",
-                        },
-                        {
-                          title: "SHA-2 - Bilibili",
-                          url: "https://www.bilibili.com/video/BV1uTQmByEZx/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，十三分半",
-                        },
-                      ],
-                    },
-                    {
-                      id: "sha3",
-                      name: "SHA-3 (下一代标准)",
-                      type: "file",
-                      resources: [
-                        {
-                          title: "SHA-3 - Wikipedia",
-                          url: "https://en.wikipedia.org/wiki/SHA-3",
-                          description: "经典Wikipedia起手，没啥好说的",
-                        },
-                        {
-                          title: "SHA-3 - Bilibili",
-                          url: "https://www.bilibili.com/video/BV1tz9kBNE2K/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，九分钟出头",
-                        },
-                        {
-                          title: "Keccak Team",
-                          url: "https://keccak.team/index.html",
-                          description: "官方网站",
-                        },
-                      ],
-                    },
-                    {
-                      id: "BLAKE2b",
-                      name: "BLAKE2b (现行标准)",
-                      type: "file",
-                      resources: [
-                        {
-                          title: "BLAKE (hash function) - Wikipedia",
-                          url: "https://en.wikipedia.org/wiki/BLAKE_(hash_function)",
-                          description: "经典Wikipedia起手，没啥好说的",
-                        },
-                        {
-                          title: "BLAKE2b - Bilibili",
-                          url: "https://www.bilibili.com/video/BV1BMdNBmEsx?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，六分半",
-                        },
-                        {
-                          title:
-                            " The BLAKE2 Cryptographic Hash and Message Authentication Code (MAC)",
-                          url: "https://datatracker.ietf.org/doc/html/rfc7693",
-                          description: "官方文档",
-                        },
-                      ],
-                    },
-                    {
-                      id: "sm3",
-                      name: "SM3 (中国国密标准)",
-                      type: "file",
-                      resources: [
-                        {
-                          title: "SM3 (hash function) - Wikipedia",
-                          url: "https://en.wikipedia.org/wiki/SM3_(hash_function)",
-                          description: "经典Wikipedia起手，没啥好说的",
-                        },
-                        {
-                          title: "国密SM3 - Bilibili",
-                          url: "https://www.bilibili.com/video/BV1dnLb6LEAi/?vd_source=4a6bef24691326e4a995c534ea99f768",
-                          description: "中文视频讲解，六分半",
-                        },
-                        {
-                          title: "SM3密码杂凑算法 - 国家密码管理局",
-                          url: "https://oscca.gov.cn/sca/xxgk/2010-12/17/1002389/files/302a3ada057c4a73830536d03e683110.pdf",
-                          description: "官方文档",
-                        },
-                      ],
+                      title: "Keccak Team",
+                      url: "https://keccak.team/index.html",
+                      description: "官方网站",
                     },
                   ],
                 },
               ],
             },
             {
-              id: "message-authentication-codes",
-              name: "消息认证码 (Message Authentication Code, MAC)",
+              id: "modern-hash-algorithms",
+              name: "算法",
               type: "folder",
               children: [
                 {
-                  id: "generic-tools",
-                  name: "通用组件",
-                  type: "folder",
-                  children: [
-                    { id: "hmac", name: "HMAC (Hash-based MAC)", type: "file" },
-                    { id: "cmac", name: "CMAC (Cipher-based MAC)", type: "file" },
+                  id: "md5",
+                  name: "MD5 (已淘汰)",
+                  type: "file",
+                  resources: [
+                    {
+                      title: "MD5 - Wikipedia",
+                      url: "https://en.wikipedia.org/wiki/MD5",
+                      description: "Wikipedia",
+                    },
+                    {
+                      title: "MD5 - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1R4wtzxEe9/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "by Eithan Solace",
+                    },
                   ],
                 },
                 {
-                  id: "aead-components",
-                  name: "AEAD (Authenticated Encryption with Associated Data) 专用组件",
-                  type: "folder",
-                  children: [
-                    { id: "poly1305", name: "Poly1305 (ChaCha20-Poly1305的组成部件)", type: "file" },
-                    { id: "gmac", name: "GMAC (AES-GCM的组成部件)", type: "file" },
+                  id: "sha1",
+                  name: "SHA-1 (已淘汰)",
+                  type: "file",
+                  resources: [
+                    {
+                      title: "SHA-1 - Wikipedia",
+                      url: "https://en.wikipedia.org/wiki/SHA-1",
+                      description: "Wikipedia",
+                    },
+                    {
+                      title: "SHA-1 - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1bfAGzGEBx/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "by Eithan Solace",
+                    },
+                  ],
+                },
+                {
+                  id: "sha2",
+                  name: "SHA-2 (现行标准)",
+                  type: "file",
+                  resources: [
+                    {
+                      title: "SHA-2 - Wikipedia",
+                      url: "https://en.wikipedia.org/wiki/SHA-2",
+                      description: "Wikipedia",
+                    },
+                    {
+                      title: "SHA-2 - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1uTQmByEZx/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "by Eithan Solace",
+                    },
+                  ],
+                },
+                {
+                  id: "sha3",
+                  name: "SHA-3 (下一代标准)",
+                  type: "file",
+                  resources: [
+                    {
+                      title: "SHA-3 - Wikipedia",
+                      url: "https://en.wikipedia.org/wiki/SHA-3",
+                      description: "Wikipedia",
+                    },
+                    {
+                      title: "SHA-3 - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1tz9kBNE2K/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "by Eithan Solace",
+                    },
+                    {
+                      title: "Keccak Team",
+                      url: "https://keccak.team/index.html",
+                      description: "官方网站",
+                    },
+                  ],
+                },
+                {
+                  id: "BLAKE2b",
+                  name: "BLAKE2b (现行标准)",
+                  type: "file",
+                  resources: [
+                    {
+                      title: "BLAKE (hash function) - Wikipedia",
+                      url: "https://en.wikipedia.org/wiki/BLAKE_(hash_function)",
+                      description: "Wikipedia",
+                    },
+                    {
+                      title: "BLAKE2b - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1BMdNBmEsx?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "by Eithan Solace",
+                    },
+                    {
+                      title:
+                        " The BLAKE2 Cryptographic Hash and Message Authentication Code (MAC)",
+                      url: "https://datatracker.ietf.org/doc/html/rfc7693",
+                      description: "官方文档",
+                    },
+                  ],
+                },
+                {
+                  id: "sm3",
+                  name: "SM3 (中国国密标准)",
+                  type: "file",
+                  resources: [
+                    {
+                      title: "SM3 (hash function) - Wikipedia",
+                      url: "https://en.wikipedia.org/wiki/SM3_(hash_function)",
+                      description: "Wikipedia",
+                    },
+                    {
+                      title: "国密SM3 - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1dnLb6LEAi/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "by Eithan Solace",
+                    },
+                    {
+                      title: "SM3密码杂凑算法 - 国家密码管理局",
+                      url: "https://oscca.gov.cn/sca/xxgk/2010-12/17/1002389/files/302a3ada057c4a73830536d03e683110.pdf",
+                      description: "官方文档",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          id: "message-authentication-codes",
+          name: "消息认证码 (Message Authentication Code, MAC)",
+          type: "folder",
+          children: [
+            {
+              id: "generic-tools",
+              name: "通用组件",
+              type: "folder",
+              children: [
+                {
+                  id: "hmac",
+                  name: "HMAC (Hash-based MAC)",
+                  type: "file",
+                  resources: [
+                    {
+                      title: "HMAC - Wikipedia",
+                      url: "https://en.wikipedia.org/wiki/HMAC",
+                      description: "Wikipedia",
+                    },
+                    {
+                      title: "HMAC(前篇) - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1urEJ6QEP9?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "by Eithan Solace",
+                    },
+                    {
+                      title: "HMAC(后篇) - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1DMMN6DEgC?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "by Eithan Solace",
+                    },
+                  ],
+                },
+                {
+                  id: "cmac",
+                  name: "CMAC (Cipher-based MAC)",
+                  type: "file",
+                  resources: [
+                    {
+                      title: "One-key_MAC - Wikipedia",
+                      url: "https://en.wikipedia.org/wiki/One-key_MAC",
+                      description: "Wikipedia",
+                    },
+                    {
+                      title: "CMAC - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1YGMn6PEpo?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "by Eithan Solace",
+                    },
                   ],
                 },
               ],
             },
             {
-              id: "kdf",
-              name: "密钥派生函数 (Key Derivation Function, KDF)",
+              id: "aead-components",
+              name: "AEAD (Authenticated Encryption with Associated Data) 专用组件",
               type: "folder",
               children: [
                 {
-                  id: "password-based-kdf",
-                  name: "基于口令 (Password-Based)",
-                  type: "folder",
-                  children: [
-                    { id: "pbkdf2", name: "PBKDF2", type: "file" },
-                    { id: "argon2", name: "Argon2", type: "file" },
+                  id: "poly1305",
+                  name: "Poly1305 (ChaCha20-Poly1305的组成部件)",
+                  type: "file",
+                  resources: [
+                    {
+                      title: "Poly1305 - Wikipedia",
+                      url: "https://en.wikipedia.org/wiki/Poly1305",
+                      description: "Wikipedia",
+                    },
+                    {
+                      title: "Poly1305(前篇) - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1pFNb6eEXD?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "by Eithan Solace",
+                    },
+                    {
+                      title: "Poly1305(后篇) - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1DMMN6DEgC?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "by Eithan Solace",
+                    },
                   ],
                 },
                 {
-                  id: "key-based-kdf",
-                  name: "基于密钥 (Key-Based)",
-                  type: "folder",
-                  children: [{ id: "hkdf", name: "HKDF", type: "file" }],
+                  id: "gmac",
+                  name: "GMAC (AES-GCM的组成部件)",
+                  type: "file",
+                  resources: [
+                    {
+                      title: "Galois/Counter Mode - Wikipedia",
+                      url: "https://en.wikipedia.org/wiki/Galois/Counter_Mode",
+                      description: "Wikipedia",
+                    },
+                    {
+                      title: "GMAC - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1rXga6pEzh?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "by Eithan Solace",
+                    },
+                  ],
                 },
               ],
             },
+          ],
+        },
+        {
+          id: "kdf",
+          name: "密钥派生函数 (Key Derivation Function, KDF)",
+          type: "folder",
+          children: [
+            {
+              id: "key-based-kdf",
+              name: "基于密钥 (Key-Based)",
+              type: "folder",
+              children: [{ id: "hkdf", name: "HKDF", type: "file" }],
+            },
+            {
+              id: "password-based-kdf",
+              name: "基于口令 (Password-Based)",
+              type: "folder",
+              children: [
+                { id: "pbkdf2", name: "PBKDF2", type: "file" },
+                { id: "argon2", name: "Argon2", type: "file" },
+              ],
+            },
+          ],
+        },
         {
           id: "asymmetric-primitives",
           name: "非对称密码",
