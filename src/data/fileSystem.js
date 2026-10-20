@@ -1140,15 +1140,85 @@ export const fileSystemData = {
               id: "key-based-kdf",
               name: "基于密钥 (Key-Based)",
               type: "folder",
-              children: [{ id: "hkdf", name: "HKDF", type: "file" }],
+              children: [
+                {
+                  id: "hkdf",
+                  name: "HKDF",
+                  type: "file",
+                  resources: [
+                    {
+                      title: "HKDF - Wikipedia",
+                      url: "https://en.wikipedia.org/wiki/HKDF",
+                      description: "Wikipedia",
+                    },
+                    {
+                      title: "HMAC-based Extract-and-Expand Key Derivation Function (HKDF)",
+                      url: "https://datatracker.ietf.org/doc/html/rfc5869",
+                      description: "官方文档 (RFC 5869)",
+                    },
+                    {
+                      title: "HKDF(前篇) - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1KSgs6GEqp/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "by Eithan Solace",
+                    },
+                    {
+                      title: "HKDF(后篇) - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1Jd8g66Ey2/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "by Eithan Solace",
+                    },
+                  ],
+                },
+              ],
             },
             {
               id: "password-based-kdf",
               name: "基于口令 (Password-Based)",
               type: "folder",
               children: [
-                { id: "pbkdf2", name: "PBKDF2", type: "file" },
-                { id: "argon2", name: "Argon2", type: "file" },
+                {
+                  id: "pbkdf2",
+                  name: "PBKDF2",
+                  type: "file",
+                  resources: [
+                    {
+                      title: "PBKDF2 - Wikipedia",
+                      url: "https://en.wikipedia.org/wiki/PBKDF2",
+                      description: "Wikipedia",
+                    },
+                    {
+                      title: "PKCS #5: Password-Based Cryptography Specification",
+                      url: "https://datatracker.ietf.org/doc/html/rfc8018",
+                      description: "官方文档 (RFC 8018)",
+                    },
+                    {
+                      title: "PBKDF2 - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1qEhN6WEZK/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "by Eithan Solace",
+                    },
+                  ],
+                },
+                {
+                  id: "argon2",
+                  name: "Argon2",
+                  type: "file",
+                  resources: [
+                    {
+                      title: "Argon2 - Wikipedia",
+                      url: "https://en.wikipedia.org/wiki/Argon2",
+                      description: "Wikipedia",
+                    },
+                    {
+                      title: "The memory-hard Argon2 password hash and proof-of-work function",
+                      url: "https://datatracker.ietf.org/doc/html/rfc9106",
+                      description: "官方文档 (RFC 9106)",
+                    },
+                    {
+                      title: "Argon2 - Bilibili",
+                      url: "https://www.bilibili.com/video/BV1uBta6yESK/?vd_source=4a6bef24691326e4a995c534ea99f768",
+                      description: "by Eithan Solace",
+                    },
+                  ],
+                },
               ],
             },
           ],
@@ -1164,26 +1234,26 @@ export const fileSystemData = {
               type: "folder",
               children: [
                 {
-                  id: "based-on-ifp",
-                  name: "基于大数分解问题 (IFP-based)",
-                  type: "folder",
-                  children: [
-                    { id: "rsa", name: "RSA", type: "file" },
-                    { id: "paillier", name: "Paillier", type: "file" },
-                  ],
-                },
-                {
                   id: "based-on-dlp",
                   name: "基于离散对数问题 (DLP-based)",
                   type: "folder",
                   children: [
-                    { id: "dsa", name: "DSA (已淘汰)", type: "file" },
                     {
                       id: "diffie-hellman",
                       name: "Diffie-Hellman",
                       type: "file",
                     },
                     { id: "elgamal", name: "ElGamal", type: "file" },
+                    { id: "dsa", name: "DSA", type: "file" },
+                  ],
+                },
+                {
+                  id: "based-on-ifp",
+                  name: "基于大数分解问题 (IFP-based)",
+                  type: "folder",
+                  children: [
+                    { id: "rsa", name: "RSA", type: "file" },
+                    { id: "paillier", name: "Paillier", type: "file" },
                   ],
                 },
                 {
