@@ -96,13 +96,13 @@ export const fileSystemData = {
 │
 ├── 非对称密码
 │   ├── 经典公钥密码
+│   │   ├── 基于离散对数问题 (DLP-based)
+│   │   │   ├── Diffie-Hellman
+│   │   │   ├── ElGamal
+│   │   │   └── DSA
 │   │   ├── 基于大数分解问题 (IFP-based)
 │   │   │   ├── RSA
 │   │   │   └── Paillier
-│   │   ├── 基于离散对数问题 (DLP-based)
-│   │   │   ├── DSA (已淘汰)
-│   │   │   ├── Diffie-Hellman
-│   │   │   └── ElGamal
 │   │   └── 基于椭圆曲线离散对数问题 (ECDLP-based)
 │   │       ├── NIST体系
 │   │       │   ├── ECDSA
