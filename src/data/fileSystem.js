@@ -99,6 +99,7 @@ export const fileSystemData = {
 │   │   ├── 基于离散对数问题 (DLP-based)
 │   │   │   ├── Diffie-Hellman
 │   │   │   ├── ElGamal
+│   │   │   ├── Schnorr
 │   │   │   └── DSA
 │   │   ├── 基于大数分解问题 (IFP-based)
 │   │   │   ├── RSA
